@@ -25,7 +25,7 @@ function listarAnimais($conexao){
 };
 
 function listarTipos($conexao){
-    $sql = "SELECT * FROM tb_pet WHERE $tipo == $tipo;
+    $sql = "SELECT * FROM tb_pet  WHERE $tipo == $tipo ";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
