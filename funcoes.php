@@ -3,8 +3,18 @@ function cadastrarAnimais($conexao){};
 
 function editarAnimais($conexao){};
 
-function removerAnimais($conexao){};
+function removerAnimais($conexao,$idPet){
+$sql = "DELETE FROM tb_pet WHERE idPet = ?";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'i', $idPet);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    
+    return $funcionou; //true ou false
+};
+    
 function cadastrarUsuario($conexao,$nome, $email, $senha, $endereco_usuario, $telefone){
     $sql= "INSERT INTO tb_usuario (nome, email, senha, endereco_usuario, telefone) VALUES (?,?,?,?)";
     $comando = mysqli_prepare($conexao, $sql);
@@ -24,8 +34,8 @@ function listarAnimais($conexao){
     $resultado = mysqli_stmt_get_result($comando);
 
     $lista_animais = [];
-    while ($animais = mysqli_fetch_assoc($resultado)) {
-        $lista_animais[] = $animais;
+    while ($pet = mysqli_fetch_assoc($resultado)) {
+        $lista_animais[] = $pet;
     }
 
     mysqli_stmt_close($comando);
