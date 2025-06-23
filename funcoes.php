@@ -68,13 +68,5 @@ function listarPortes($conexao){};
 function listarIdade($conexao){};
 
 
-
-
-
-NATHAN
-
-
-
-
-
+dddd
 ?>
