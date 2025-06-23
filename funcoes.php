@@ -68,7 +68,6 @@ function listarPortes($conexao){};
 function listarIdade($conexao){};
 
 
-faafafafafafafafaf
 
 
 ?>
