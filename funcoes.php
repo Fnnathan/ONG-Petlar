@@ -1,5 +1,22 @@
 <?php
-function cadastrarAnimais($conexao){};
+function salvarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
+
+    $sql = "INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'isssssif', $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+
+    $funcionou = mysqli_stmt_execute($comando);
+
+    // retorna o valor do id que acabou de ser inserido
+    $idPet = mysqli_stmt_insert_id($comando);
+    
+    mysqli_stmt_close($comando);
+    
+    return $idPet;
+
+
+};
 
 function editarAnimais($conexao){};
 
@@ -60,25 +77,20 @@ function listarTipos($conexao){
 };
 
 function listarRaças($conexao){};
-    $sql = "SELECT * FROM tb_pet  WHERE raca= ? ";
-    $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 's', $raca);
-    mysqli_stmt_execute($comando);
-    $resultado = mysqli_stmt_get_result($comando);
-
-    $lista_tipos = [];
-    while ($tipos = mysqli_fetch_assoc($resultado)) {
-        $lista_racas[] = $racas;
-    }
-    mysqli_stmt_close($comando);
-    return $lista_racas;
 
 
 function listarPortes($conexao){};
 
 
 function listarIdade($conexao){};
+
+
+
+
+
+fggug
+
+
 
 
 
