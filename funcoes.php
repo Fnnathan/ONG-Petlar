@@ -1,5 +1,22 @@
 <?php
-function cadastrarAnimais($conexao){};
+function salvarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
+
+    $sql = "INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'isssssif', $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+
+    $funcionou = mysqli_stmt_execute($comando);
+
+    // retorna o valor do id que acabou de ser inserido
+    $idPet = mysqli_stmt_insert_id($comando);
+    
+    mysqli_stmt_close($comando);
+    
+    return $idPet;
+
+
+};
 
 function editarAnimais($conexao){};
 
@@ -68,5 +85,13 @@ function listarPortes($conexao){};
 function listarIdade($conexao){};
 
 
-dddd
+
+
+
+fggug
+
+
+
+
+
 ?>
