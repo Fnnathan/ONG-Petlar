@@ -67,8 +67,8 @@ function listarRaças($conexao){};
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
-    $lista_tipos = [];
-    while ($tipos = mysqli_fetch_assoc($resultado)) {
+    $lista_racas = [];
+    while ($raca = mysqli_fetch_assoc($resultado)) {
         $lista_racas[] = $racas;
     }
     mysqli_stmt_close($comando);
@@ -83,7 +83,7 @@ function listarPortes($conexao){};
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
-    $lista_tipos =
+    $lista_portes =
 
 
 function listarIdade($conexao){};
