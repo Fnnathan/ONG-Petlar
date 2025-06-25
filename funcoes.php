@@ -76,6 +76,7 @@ function listarRaças($conexao){};
 
 
 function listarPortes($conexao){};
+    $sql = "SELECT * FROM tb_pet"
 
 
 function listarIdade($conexao){};
