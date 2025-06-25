@@ -76,7 +76,7 @@ function listarTipos($conexao){
     return $lista_tipos;
 };
 
-function listarRaças($conexao){};
+function listarRaças($conexao, $raca){
 
     $sql = "SELECT * FROM tb_pet  WHERE raca= ? ";
     $comando = mysqli_prepare($conexao, $sql);
@@ -92,7 +92,10 @@ function listarRaças($conexao){};
     mysqli_stmt_close($comando);
     return $lista_racas;
 
-function listarPortes($conexao){};
+    };
+
+function listarPortes($conexao, $porte){
+
     $sql = "SELECT * FROM tb_pet WHERE porte= ? ";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -105,9 +108,30 @@ function listarPortes($conexao){};
         $lista_portes[] = $portes; 
     }
     mysqli_stmt_close($comando);
+    return $lista_portes;
+
+    };
 
 
-function listarIdade($conexao){};
+
+function listarIdade($conexao, $idade){
+    
+    $sql = "SELECT * FROM tb_pet WHERE idade= ? ";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param(comando, 's', $idade);
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $lista_idades = [];
+    while ($idade = mysqli_fetch_assoc($resultado)) {
+        $lista_idades[] = $idades; 
+    }
+    mysqli_stmt_close($comando);
+    return $lista_idades;
+
+    };
+
 
 
 
