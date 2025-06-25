@@ -1,12 +1,11 @@
 <?php
-function salvarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
+function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
 
-    $sql = "INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_pet ( nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'isssssid', $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+    mysqli_stmt_bind_param($comando, 'sssssid', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
 
-    $funcionou = mysqli_stmt_execute($comando);
 
     // retorna o valor do id que acabou de ser inserido
     $idPet = mysqli_stmt_insert_id($comando);
