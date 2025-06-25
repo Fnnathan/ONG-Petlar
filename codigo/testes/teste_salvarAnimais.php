@@ -4,7 +4,7 @@ require_once "../funcoes.php";
 
 $nome = "Nick";
 $endereco_pet = "Uruana";
-$tipo = "Cahorro";
+$tipo = "Cão";
 $raca = "Border Collie";
 $porte = "Médio";
 $idade = "1 ";
