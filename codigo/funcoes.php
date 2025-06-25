@@ -4,7 +4,7 @@ function salvarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $po
     $sql = "INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'isssssif', $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+    mysqli_stmt_bind_param($comando, 'isssssid', $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
 
     $funcionou = mysqli_stmt_execute($comando);
 
@@ -18,7 +18,23 @@ function salvarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $po
 
 };
 
-function editarAnimais($conexao){};
+function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
+   
+    $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=? WHERE idPet=?";
+    $comando = mysqli_prepare($conexao, $sql);
+    
+    // varchar, string, data -> s
+    // inteiro -> i
+    // dinheiro, decimal -> d
+    mysqli_stmt_bind_param($comando, 'sssssid',  $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+    
+
+    $funcionou = mysqli_stmt_execute($comando);
+    
+    mysqli_stmt_close($comando);
+    return $funcionou;
+};
+
 
 function removerAnimais($conexao,$idPet){
 $sql = "DELETE FROM tb_pet WHERE idPet = ?";
