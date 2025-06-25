@@ -76,7 +76,14 @@ function listarRaças($conexao){};
 
 
 function listarPortes($conexao){};
-    $sql = "SELECT * FROM tb_pet"
+    $sql = "SELECT * FROM tb_pet WHERE porte= ? ";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param(comando, 's', $porte);
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $lista_tipos =
 
 
 function listarIdade($conexao){};
