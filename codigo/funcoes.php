@@ -92,25 +92,24 @@ function listarTipos($conexao){
     return $lista_tipos;
 };
 
-function listarRaças($conexao, $raca){
+function PesquisarRacas($conexao, $raca){
 
-    $sql = "SELECT * FROM tb_pet  WHERE raca= ? ";
+    $sql = "SELECT * FROM tb_pet WHERE raca= ?";
     $comando = mysqli_prepare($conexao, $sql);
-    
-    mysqli_stmt_bind_param($comando, 's', $raca);
+
+    mysqli_stmt_bind_param($comando, 'i', $raca);
+
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
-    $lista_racas = [];
-    while ($raca = mysqli_fetch_assoc($resultado)) {
-        $lista_racas[] = $racas;
-    }
+    $racas = mysqli_fetch_assoc($resultado);
+
     mysqli_stmt_close($comando);
-    return $lista_racas;
+    return $racas;
 
     };
 
-function listarPortes($conexao, $porte){
+function PesquisarPortes($conexao, $porte){
 
     $sql = "SELECT * FROM tb_pet WHERE porte= ? ";
     $comando = mysqli_prepare($conexao, $sql);
@@ -130,7 +129,7 @@ function listarPortes($conexao, $porte){
 
 
 
-function listarIdade($conexao, $idade){
+function PesquisarIdade($conexao, $idade){
     
     $sql = "SELECT * FROM tb_pet WHERE idade= ? ";
     $comando = mysqli_prepare($conexao, $sql);
