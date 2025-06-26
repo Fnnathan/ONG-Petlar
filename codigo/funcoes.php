@@ -15,7 +15,6 @@ function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $id
     
     return $idPet;
 
-
 };
 
 function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
@@ -26,7 +25,7 @@ function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $po
     // varchar, string, data -> s
     // inteiro -> i
     // dinheiro, decimal -> d
-    mysqli_stmt_bind_param($comando, 'sssssid',  $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+    mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet);
     
 
     $funcionou = mysqli_stmt_execute($comando);
@@ -57,7 +56,6 @@ function cadastrarUsuario($conexao,$nome, $email, $senha, $endereco_usuario, $te
     return $funcionou;
 };
 
-function logarUsuario($conexao){};
 
 function listarAnimais($conexao){
     $sql = "SELECT * FROM tb_pet";
