@@ -127,7 +127,7 @@ function pesquisarPortes($conexao, $porte){
 
 
 
-function PesquisarIdade($conexao, $idade){
+function pesquisarIdade($conexao, $idade){
     
     $sql = "SELECT * FROM tb_pet WHERE idade= ?";
     $comando = mysqli_prepare($conexao, $sql);
