@@ -1,15 +1,15 @@
 <form action="salvarUsuario.php" method="post">
         Nome: <br>
         <input type="text" name="nome"> <br><br>
-        Tipo: <br>
+        E-mail: <br>
         <input type="text" name="tipo"> <br><br>
-        porte: <br>
+        Senha: <br>
         <input type="text" name="porte"> <br><br>
         Raça: <br>
         <input type="text" name="porte"> <br><br>
-        Idade: <br>
+        Endereço: <br>
         <input type="text" name="porte"> <br><br>
-        Peso: <br>
+        Telefone: <br>
         <input type="text" name="porte"> <br><br>
 
         <input type="submit" value="Cadastrar">
