@@ -5,8 +5,6 @@
         <input type="text" name="tipo"> <br><br>
         Senha: <br>
         <input type="text" name="porte"> <br><br>
-        Raça: <br>
-        <input type="text" name="porte"> <br><br>
         Endereço: <br>
         <input type="text" name="porte"> <br><br>
         Telefone: <br>
