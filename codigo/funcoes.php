@@ -47,7 +47,7 @@ $sql = "DELETE FROM tb_pet WHERE idPet = ?";
     return $funcionou; //true ou false
 };
     
-function cadastrarUsuario($conexao,$nome, $email, $senha, $endereco_usuario, $telefone){
+function salvarUsuario($conexao,$nome, $email, $senha, $endereco_usuario, $telefone){
     $sql= "INSERT INTO tb_usuario (nome, email, senha, endereco_usuario, telefone) VALUES (?,?,?,?)";
     $comando = mysqli_prepare($conexao, $sql);
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
