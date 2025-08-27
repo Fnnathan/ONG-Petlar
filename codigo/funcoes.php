@@ -1,10 +1,10 @@
 <?php
-function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso,$tb_usuario_idUsuario ){
+function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso){
 
-    $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $tb_usuario_idUsuario );
+    mysqli_stmt_bind_param($comando, 'sssssid', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso);
 
     mysqli_stmt_execute($comando);
 

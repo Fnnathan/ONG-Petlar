@@ -9,10 +9,13 @@
      <form action="salvarAnimais.php" method="post">
         Nome do Pet: <br>
         <input type="text" name="nome"> <br><br>
-        Tipo: <br>
-        <input type="text" name="tipo"> <br><br>
-        porte: <br>
-        <input type="text" name="porte"> <br><br>
+        
+        Tipo: <br><br>
+        Cachorro<input type="radio" name="tipo">Gato<input type="radio" name="tipo"> <br><br>
+
+
+        Porte: <br><br>
+        Grande<input type="radio" name="tipo">  Médio<input type="radio" name="tipo">  Pequeno<input type="radio" name="tipo"> <br><br>
         Raça: <br>
         <input type="text" name="porte"> <br><br>
         Idade: <br>

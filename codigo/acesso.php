@@ -14,7 +14,7 @@
         Senha: <br>
         <input type="text" name="senha"> <br><br>
 
-        <a href="form_usuario.php">Primeiro acesso</a> <br><br>
+        Não é Cadastrado?<a href="form_usuario.php">Cadastrar-se</a> <br><br>
 
         <input type="submit" value="Acessar">
     </form>
