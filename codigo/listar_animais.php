@@ -7,8 +7,8 @@
 </head>
 <body>
             <?php
-                require_once "../conexao.php";
-                require_once "../funcoes.php";
+                require_once "conexao.php";
+                require_once "funcoes.php";
 
                     $id = $_POST['idproduto'];
                     $nome = $_POST['nome'];
