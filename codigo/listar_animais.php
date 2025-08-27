@@ -47,6 +47,7 @@
             echo "<td>$idPet</td>";
             echo "<td>$nome</td>";
             echo "<td>$endereco_pet</td>";
+            echo "<td>$tipo</td>";
             echo "<td>$raca</td>";
             echo "<td>$porte</td>";
             echo "<td>$idade</td>";
