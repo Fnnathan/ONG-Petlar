@@ -4,23 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar animais</title>
+     <style>
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
             <?php
                 require_once "conexao.php";
                 require_once "funcoes.php";
 
-                    $id = $_POST['idproduto'];
-                    $nome = $_POST['nome'];
-                    $endereco_pet = $_POST['endereco_pet'];
-                    $tipo = $_POST['tipo'];
-                    $raca = $_POST['raca'];
-                    $porte = $_POST['porte'];
-                    $idade = $_POST['idade'];
-                    $peso = $_POST['peso'];
-                   
-                    listarAnimais($conexao);
+                    $lista_animais = listarAnimais($conexao);
             ?>
- 
+            <table border="1">
+            <tr>
+                <td>Id</td>
+                <td>Nome</td>
+                <td>Endereço</td>
+                <td>Tipo</td>
+                <td>Raça</td>
+                <td>Porte</td>
+                <td>Idade</td>
+                <td>Peso</td>
+                <td>Foto</td>
+            </tr>
+
+            <?php
+        foreach ($lista_animais as $animais) {
+                    $idPet = $animais['idPet'];
+                    $nome = $animais['nome'];
+                    $endereco_pet = $animais['endereco_pet'];
+                    $tipo = $animais['tipo'];
+                    $raca = $animais['raca'];
+                    $porte = $animais['porte'];
+                    $idade = $animais['idade'];
+                    $peso = $animais['peso'];
+                    $foto = $animais['foto'];
+
+            echo "<tr>";
+            echo "<td>$idPet</td>";
+            echo "<td>$nome</td>";
+            echo "<td>$endereco_pet</td>";
+            echo "<td>$raca</td>";
+            echo "<td>$porte</td>";
+            echo "<td>$idade</td>";
+            echo "<td>$peso</td>";
+            echo "<td><img src='fotos/$foto'></td>";
+            echo "</tr>";
+        }
+    
+        ?>
+        
 </body>
 </html>
