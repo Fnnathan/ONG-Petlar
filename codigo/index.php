@@ -8,7 +8,7 @@
 <body>
     <h1>Página inicial</h1>
 
-    <p>Olá, <?php echo $nome_usuario . "."; ?></p>
+
     <ul>
 
         <li>

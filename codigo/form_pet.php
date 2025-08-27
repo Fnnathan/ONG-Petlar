@@ -9,19 +9,22 @@
      <form action="salvarAnimais.php" method="post">
         Nome do Pet: <br>
         <input type="text" name="nome"> <br><br>
+
+        Endereço do pet: <br>
+        <input type="text" name="endereco_pet"> <br><br>
         
         Tipo: <br><br>
-        Cachorro<input type="radio" name="tipo">Gato<input type="radio" name="tipo"> <br><br>
+        Cachorro<input type="radio" value="Cachorro" name="tipo">Gato<input type="radio" value="Gato" name="tipo"> <br><br>
 
 
         Porte: <br><br>
-        Grande<input type="radio" name="tipo">  Médio<input type="radio" name="tipo">  Pequeno<input type="radio" name="tipo"> <br><br>
+        Grande<input value="Grande" type="radio" name="porte">  Médio<input type="radio" value="Médio" name="porte">  Pequeno<input type="radio" value="Pequeno" name="porte"> <br><br>
         Raça: <br>
-        <input type="text" name="porte"> <br><br>
+        <input type="text" name="raca"> <br><br>
         Idade: <br>
-        <input type="text" name="porte"> <br><br>
+        <input type="text" name="idade"> <br><br>
         Peso: <br>
-        <input type="text" name="porte"> <br><br>
+        <input type="text" name="peso"> <br><br>
 
         <input type="submit" value="Cadastrar">
 </body>
