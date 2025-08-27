@@ -15,7 +15,10 @@
             <a href="listar_animais.php">Listar animais</a>
         </li>
         <li>
-            <a href="listarProdutos.php">Lista de produtos cadastrados</a>
+            <a href="form_pet.php">Cadastrar animais</a>
+        </li>
+        <li>
+            <a href="form_usuario.php">Cadastrar usuário</a>
         </li>
         <li>
             <a href="deslogar.php">Sair</a>
