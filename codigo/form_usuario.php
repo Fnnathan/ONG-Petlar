@@ -12,17 +12,25 @@
 
     <form class="form" action="salvarUsuario.php" method="post">
         Nome: <br>
-        <input class="input" type="text" name="nome" placeholder="Nome" required>
+        <input class="input" type="text" name="nome" placeholder="Nome" required><br><br>
         E-mail: <br>
-        <input class="input" type="text" name="email" placeholder="E-mail" required>
+        <input class="input" type="text" name="email" placeholder="E-mail" required><br><br>
+     
         Senha: <br>
-        <input class="input" type="password" name="senha" placeholder="Senha" required>
+        <input class="input" type="password" name="senha" placeholder="Senha" required><br><br>
+       
         Endereço: <br>
-        <input class="input" type="text" name="endereco" placeholder="Endereço" required>
+        <input class="input" type="text" name="endereco" placeholder="Endereço" required><br><br>
+       
         Telefone: <br>
-        <input class="input" type="text" name="telefone" placeholder="Telefone" required>
+        <input class="input" type="text" name="telefone" placeholder="Telefone" required><br><br>
+   
 
         <input class="login-button" type="submit" value="Cadastrar">
+
+         <span class="forgot-password">
+                Já está cadastrado? <a href="acesso.php">Entrar</a>
+            </span>
     </form>
   </div>
 </body>
