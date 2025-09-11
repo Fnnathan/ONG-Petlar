@@ -20,7 +20,7 @@
         <input class="input" type="password" name="senha" placeholder="Senha" required><br><br>
        
         Endereço: <br>
-        <input class="input" type="text" name="endereco" placeholder="Endereço" required><br><br>
+        <input class="input" type="text" name="endereco_usuario" placeholder="Endereço" required><br><br>
        
         Telefone: <br>
         <input class="input" type="text" name="telefone" placeholder="Telefone" required><br><br>
