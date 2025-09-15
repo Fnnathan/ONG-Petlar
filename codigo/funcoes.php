@@ -153,7 +153,7 @@ function verificarLogin($conexao,$email,$senha){
     $resultado = mysqli_query($conexao, $sql);
 
     if (mysqli_num_rows($resultado) == 0) {
-        header("Location: index.php");
+        echo"Usuário não encontrado";
     }
     else {
         $linha = mysqli_fetch_array($resultado);
@@ -170,7 +170,7 @@ function verificarLogin($conexao,$email,$senha){
             header("Location: home.php");
         }
         else {
-            header("Location: index.php");
+            echo'Usuário ou senha Incorretos';
         }
     }
 }

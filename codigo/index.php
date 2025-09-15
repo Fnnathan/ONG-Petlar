@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="index.css">
     
 </head>
-<body>
-    <div class="header">
-        <h1>Página Inicial</h1>
-    </div>
 
-    <div class="content">
-        <ul>
-            <li><a href="listar_animais.php" class="button">Listar Animais</a></li>
-            <li><a href="form_pet.php" class="button">Cadastrar Animais</a></li>
-            <li><a href="form_usuario.php" class="button">Cadastrar Usuário</a></li>
-            <li><a href="deslogar.php" class="button">Sair</a></li>
-        </ul>
-    </div>
+<body>
+<a href=""><i class="fa-regular fa-user"></i> </a>
+<a href=""><i class="fa-regular fa-heart"></i></a>
+
+<h3>Petlar</h3><br>um lar para cada pet
+
+<a href="">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
+    
+   <iframe src="listar_animais.php" name="meiuca" frameborder="3">
+    
+    </iframe>
 
     <div class="footer">
-        <p>&copy; 2025 Minha Empresa. Todos os direitos reservados.</p>
+        Conheça-nos
+        Sobre Petlar
+        <br><br>
+        Deixe-nos ajudar você
+        Sua conta
+        Devoluções
+        Ajuda
+
+        <img src="PETLARrodape.png" alt="">
+        <p>&copy; 2025-2026 Petlar.com.br </p>
     </div>
 </body>
 </html>
