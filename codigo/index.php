@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="estilo.css">
-<<<<<<< Updated upstream
     <script src="https://kit.fontawesome.com/91470376c8.js" crossorigin="anonymous"></script>
-=======
->>>>>>> Stashed changes
     
 </head>
 
 <body>
+
+<div class="cabecalhoazul"></div>
+    
 <a href=""><i class="fa-regular fa-user" style="color: #74C0FC;"></i></a>
 <a href=""><i class="fa-solid fa-heart" style="color: #74C0FC;"></i></a>
 
 <h3>Petlar</h3><br>um lar para cada pet
 
-<<<<<<< Updated upstream
-<a href="logar.php" target="meiuca" >Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
-=======
 <a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
->>>>>>> Stashed changes
     
    <iframe src="listar_animais.php" name="meiuca" class="iframemeio" frameborder="3">
     
