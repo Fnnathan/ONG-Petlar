@@ -9,6 +9,6 @@ $endereco_usuario = $_POST['endereco_usuario'] ;
 $telefone = $_POST['telefone'] ;
 
 salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $telefone);
-header("location:index.php");z
+header("location:index.php");
 
 ?>

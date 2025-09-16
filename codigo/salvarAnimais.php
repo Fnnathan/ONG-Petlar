@@ -11,5 +11,6 @@ $idade = $_POST['idade'];
 $peso = $_POST['peso'];
 
 
-salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso )
+salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
+header("location:index.php");
 ?>
