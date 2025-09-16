@@ -10,8 +10,8 @@
 </head>
 
 <body>
-<a href=""><i class="fa-regular fa-user"></i>></i> </a>
-<a href=""><i class="fa-regular fa-heart"></i>></i></a>
+<a href=""><i class="fa-regular fa-user" style="color: #74C0FC;"></i></a>
+<a href=""><i class="fa-solid fa-heart" style="color: #74C0FC;"></i></a>
 
 <h3>Petlar</h3><br>um lar para cada pet
 
