@@ -9,7 +9,7 @@ function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $id
     mysqli_stmt_execute($comando);
 
     // retorna o valor do id que acabou de ser inserido
-    $idPet = mysqli_stmt_insert_id($comando);
+    $idPet = mysqli_insert_id($conexao);
     
     mysqli_stmt_close($comando);
     
