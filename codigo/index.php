@@ -10,14 +10,17 @@
 </head>
 
 <body>
-<a href=""><i class="fa-regular fa-user"></i>></i> </a>
-<a href=""><i class="fa-regular fa-heart"></i>></i></a>
+
+<div class="cabecalhoazul"></div>
+    
+<a href=""><i class="fa-regular fa-user" style="color: #74C0FC;"></i></a>
+<a href=""><i class="fa-solid fa-heart" style="color: #74C0FC;"></i></a>
 
 <h3>Petlar</h3><br>um lar para cada pet
 
-<a href="logar.php" target="meiuca" >Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
+<a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
     
-   <iframe src="listar_animais.php" name="meiuca" frameborder="3">
+   <iframe src="listar_animais.php" name="meiuca" class="iframemeio" frameborder="3">
     
     </iframe>
 

@@ -177,3 +177,10 @@ a.button:active {
   transform: scale(0.98);
 }
 
+.cabecalhoazul {
+  background-color: #12B1D1;
+  height: 50px;
+  width: 100%;
+
+}
+
