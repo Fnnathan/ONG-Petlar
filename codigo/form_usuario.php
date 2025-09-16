@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuário</title>
-  <link rel="stylesheet" href="entrar.css"> <!-- ou o nome do seu CSS -->
+  <link rel="stylesheet" href="estilo.css"> <!-- ou o nome do seu CSS -->
 </head>
 <body>
   <div class="container">
@@ -29,7 +29,7 @@
         <input class="login-button" type="submit" value="Cadastrar">
 
          <span class="forgot-password">
-                Já está cadastrado? <a href="acesso.php">Entrar</a>
+                Já está cadastrado? <a href="logar.php">Entrar</a>
             </span>
     </form>
   </div>
