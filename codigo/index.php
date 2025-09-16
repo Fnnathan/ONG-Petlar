@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/91470376c8.js" crossorigin="anonymous"></script>
     
 </head>
 
 <body>
-<a href=""><i class="fa-regular fa-user"></i> </a>
-<a href=""><i class="fa-regular fa-heart"></i></a>
+<a href=""><i class="fa-regular fa-user"></i>></i> </a>
+<a href=""><i class="fa-regular fa-heart"></i>></i></a>
 
 <h3>Petlar</h3><br>um lar para cada pet
 
@@ -32,5 +33,6 @@
         <img src="PETLARrodape.png" alt="">
         <p>&copy; 2025-2026 Petlar.com.br </p>
     </div>
+
 </body>
 </html>
