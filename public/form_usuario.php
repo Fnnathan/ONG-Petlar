@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuário</title>
-  <link rel="stylesheet" href="estilo.css"> <!-- ou o nome do seu CSS -->
+  <link rel="stylesheet" href="./css/estilo.css"> <!-- ou o nome do seu CSS -->
 </head>
 <body>
   <div class="container">
     <h1 class="heading">Cadastro de Usuário</h1>
 
-    <form class="form" action="salvarUsuario.php" method="post">
+    <form class="form" action="../controle/salvarUsuario.php" method="post">
         Nome: <br>
         <input class="input" type="text" name="nome" placeholder="Nome" required><br><br>
         E-mail: <br>

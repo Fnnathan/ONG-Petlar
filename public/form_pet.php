@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar pets</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
 <div class="container">
 <h1 class="heading">Doação de animais</h1>
-     <form class="form" action="salvarAnimais.php" method="post" enctype="multipart/form-data">
+     <form class="form" action="../controle/salvarAnimais.php" method="post" enctype="multipart/form-data">
         Nome do Pet: <br>
         <input class="input" type="text" name="nome"> <br><br>
 
