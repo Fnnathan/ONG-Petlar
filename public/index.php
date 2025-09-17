@@ -18,7 +18,7 @@
 
 <h3>Petlar</h3><br>um lar para cada pet
 
-<a href="../controle/logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
+<a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
     
    <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3">
     
