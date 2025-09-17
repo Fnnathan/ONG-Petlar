@@ -6,17 +6,34 @@
     <title>Página Inicial</title>
     <link rel="stylesheet" href="./css/estilo.css">
     <script src="https://kit.fontawesome.com/91470376c8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
 </head>
 
 <body>
 
-<div class="cabecalhoazul"></div>
-    
-<a href=""><i class="fa-regular fa-user" style="color: #74C0FC;"></i></a>
-<a href=""><i class="fa-solid fa-heart" style="color: #74C0FC;"></i></a>
+<div class="cabecalhoazul">
 
-<h3>Petlar</h3><br>um lar para cada pet
+
+<a href=""><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
+<a href=""><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
+<a href=""><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+
+</div>
+
+<div class="cabecalhoazulescuro">
+
+
+<img src="./assets/logo.png" alt="logo" id="logo.png">
+
+
+
+
+</div>
+
+
+
+
 
 <a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
     
@@ -25,7 +42,8 @@
     </iframe>
 
     <div class="footer">
-        Adote amor, transforme vidas. Dê a um pet a chance de ser feliz ao seu lado.
+        Conheça-nos
+        Sobre Petlar
         <br><br>
         Deixe-nos ajudar você
         Sua conta
@@ -35,6 +53,8 @@
         <img src="./assets/PETLARrodape.png" alt="">
         <p>&copy; 2025-2026 Petlar.com.br </p>
     </div>
+
+
 
 </body>
 </html>

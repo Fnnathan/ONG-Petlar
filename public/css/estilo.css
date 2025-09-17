@@ -1,5 +1,5 @@
   
-  /* Estilo para o corpo da página */
+
     body {
       background-color: lightblue; /* cor clara */
       background-image: url("dog.png");
@@ -9,7 +9,7 @@
 
     }
 
-    /* Estilo para o container principal */
+    /* From Uiverse.io by Smit-Prajapati */
     .container {
       max-width: 350px;
       background: #F8F9FD;
@@ -22,7 +22,6 @@
       
     }
 
-  /* Estilo para o título */
     .heading {
       text-align: center;
       font-weight: 900;
@@ -30,7 +29,6 @@
       color: rgb(16, 137, 211);
     }
 
-/* Estilo para o formulário */
     .form {
       margin-top: 20px;
     }
@@ -181,8 +179,46 @@ a.button:active {
 
 .cabecalhoazul {
   background-color: #12B1D1;
-  height: 50px;
+  height: 60px;
   width: 100%;
 
 }
+
+.cabecalhoazul i {
+
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 3px;
+
+
+
+
+}
+
+.cabecalhoazulescuro {
+  background-color: #005596;
+  height: 180px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#logocentro {
+
+  max-height: 140px;
+  width: auto;
+  display: block;
+
+
+
+
+}
+
+
+
+
+
 
