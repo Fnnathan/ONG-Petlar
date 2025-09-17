@@ -25,8 +25,7 @@
     </iframe>
 
     <div class="footer">
-        Conheça-nos
-        Sobre Petlar
+        Adote amor, transforme vidas. Dê a um pet a chance de ser feliz ao seu lado.
         <br><br>
         Deixe-nos ajudar você
         Sua conta
