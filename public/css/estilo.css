@@ -1,5 +1,5 @@
   
-
+  /* Estilo para o corpo da página */
     body {
       background-color: lightblue; /* cor clara */
       background-image: url("dog.png");
@@ -9,7 +9,7 @@
 
     }
 
-    /* From Uiverse.io by Smit-Prajapati */
+    /* Estilo para o container principal */
     .container {
       max-width: 350px;
       background: #F8F9FD;
@@ -22,6 +22,7 @@
       
     }
 
+  /* Estilo para o título */
     .heading {
       text-align: center;
       font-weight: 900;
@@ -29,6 +30,7 @@
       color: rgb(16, 137, 211);
     }
 
+/* Estilo para o formulário */
     .form {
       margin-top: 20px;
     }
