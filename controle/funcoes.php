@@ -175,6 +175,24 @@ function verificarLogin($conexao,$email,$senha){
     }
 }
 
+function pegarDadosUsuario($conexao, $idUsuario) {
+    $sql = "SELECT nome, tipo FROM tb_usuario WHERE idUsuario = ?";
+
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'i', $idUsuario);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $quantidade = mysqli_num_rows($resultado);
+    
+    if ($quantidade != 0) {
+        $usuario = mysqli_fetch_assoc($resultado);
+        return $usuario;
+    }
+    else {
+        return 0;
+    }
+}
 
 
 
