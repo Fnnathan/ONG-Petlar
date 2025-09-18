@@ -171,7 +171,7 @@ function verificarLogin($conexao, $email, $senha) {
 }
 
 function pegarDadosUsuario($conexao, $idUsuario) {
-    $sql = "SELECT nome, tipo FROM tb_usuario WHERE idUsuario = ?";
+    $sql = "SELECT nome, email, endereco_usuario, telefone, foto FROM tb_usuario WHERE idUsuario = ?";
 
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 'i', $idUsuario);

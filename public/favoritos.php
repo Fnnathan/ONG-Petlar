@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['idUsuario'])) {
+    header("Location: form_usuario.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +14,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     
 </body>
 </html>
