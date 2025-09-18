@@ -165,11 +165,15 @@ a.button:hover {
 
 /* Rodapé */
 .footer {
-  background-color: #333;
-  color: white;
+  background-color:  #005596;
   text-align: center;
-  padding: 10px;
+  padding: 20px 0;
   margin-top: auto;
+}
+
+.footer img {
+    display: block;      /* Garante que a imagem seja tratada como bloco */
+    margin: 0 auto;      /* Centraliza a imagem horizontalmente */
 }
 
 /* Adicionando uma animação suave no hover dos botões */
