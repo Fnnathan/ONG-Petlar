@@ -1,14 +1,28 @@
-  
 
-    body {
-      background-color: lightblue; /* cor clara */
-      background-image: url("dog.png");
-      background-position: left;  /* centraliza */
-      background-repeat: no-repeat;
-      background-size: 800px 800px;
 
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.2s;
     }
 
+    .sidebar a:hover {
+      background-color: #023e8a;
+    }
+
+    /* Fechar botão */
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 36px;
+    }
+   
+
+   
     /* From Uiverse.io by Smit-Prajapati */
     .container {
       max-width: 350px;
@@ -113,7 +127,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  color: #333;
+  color: #f6eeee;
   line-height: 1.6;
   display: flex;
   flex-direction: column;

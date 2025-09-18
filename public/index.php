@@ -24,31 +24,23 @@
 <div class="cabecalhoazulescuro">
 
 
-<img src="./assets/logo.png" alt="logo" id="logo.png">
-
-
-
-
-</div>
-
-
-
-
+<img src="./assets/logo.png" alt="logo" id="logo.png"></div>
 
 <a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
+
 
     <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
     
     </iframe>
 
     <div class="footer">
-        Adote, apoie, mude vidas. Juntos por um futuro melhor para os pets
+        Adote, apoie, mude vidas. Juntos por um futuro melhor para os pets!
         <br><br>
-        Alunos: Yasmin Monteiro
+        <img src="./assets/PETLARrodape.png" alt="Logo Petlar";>
+        <p>&copy; 2025-2026 Petlar.com.br </p><br><br>
+         Alunos: Yasmin Monteiro
                 Nathan Corrêa
                 Lucas Corrêa
-        <img src="./assets/PETLARrodape.png" alt="Logo Petlar";>
-        <p>&copy; 2025-2026 Petlar.com.br </p>
     </div>
 
 
