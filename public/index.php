@@ -36,21 +36,18 @@
 
 
 <a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
-    
-   <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3">
+
+    <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
     
     </iframe>
 
     <div class="footer">
-        Conheça-nos
-        Sobre Petlar
+        Adote, apoie, mude vidas. Juntos por um futuro melhor para os pets
         <br><br>
-        Deixe-nos ajudar você
-        Sua conta
-        Devoluções
-        Ajuda
-
-        <img src="./assets/PETLARrodape.png" alt="">
+        Alunos: Yasmin Monteiro
+                Nathan Corrêa
+                Lucas Corrêa
+        <img src="./assets/PETLARrodape.png" alt="Logo Petlar";>
         <p>&copy; 2025-2026 Petlar.com.br </p>
     </div>
 
