@@ -23,8 +23,17 @@
 
 <div class="cabecalhoazulescuro">
 
+<img src="./assets/dog.png" alt="dog" id="dogcabecalho">
 
-<img src="./assets/logo.png" alt="logo" id="logo.png"></div>
+
+<img src="./assets/logo.png" alt="logo" id="logo.png">
+
+
+<img src="./assets/cat.png" alt="cat" id="catcabecalho">
+
+
+
+</div>
 
 <a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
 
