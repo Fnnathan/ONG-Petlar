@@ -205,8 +205,9 @@ a.button:active {
 .cabecalhoazul i {
 
   font-size: 35px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 3px;
+  
 
 
 
@@ -215,7 +216,7 @@ a.button:active {
 
 .cabecalhoazulescuro {
   background-color: #005596;
-  height: 180px;
+  height: 240px;
   width: 100%;
 
   display: flex;
@@ -235,6 +236,21 @@ a.button:active {
 
 }
 
+#dogcabecalho {
+
+  max-height: 240px;
+  margin-left: 
+
+}
+
+#catcabecalho {
+
+  max-height: 240px;
+  margin-left: 60px;
+
+
+
+}
 
 
 
