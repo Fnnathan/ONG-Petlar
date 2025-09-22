@@ -1,5 +1,6 @@
 <?php
-function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso){
+function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso)
+{
 
     $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario) VALUES (?, ?, ?, ?, ?, ?, ? )";
     $comando = mysqli_prepare($conexao, $sql);
@@ -10,44 +11,46 @@ function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $id
 
     // retorna o valor do id que acabou de ser inserido
     $idPet = mysqli_insert_id($conexao);
-    
-    mysqli_stmt_close($comando);
-    
-    return $idPet;
 
+    mysqli_stmt_close($comando);
+
+    return $idPet;
 };
 
-function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso ){
-   
+function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso)
+{
+
     $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=? WHERE idPet=?";
     $comando = mysqli_prepare($conexao, $sql);
-    
+
     // varchar, string, data -> s
     // inteiro -> i
     // dinheiro, decimal -> d
     mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet);
-    
+
 
     $funcionou = mysqli_stmt_execute($comando);
-    
+
     mysqli_stmt_close($comando);
     return $funcionou;
 };
 
 
-function removerAnimais($conexao,$idPet){
-$sql = "DELETE FROM tb_pet WHERE idPet = ?";
+function removerAnimais($conexao, $idPet)
+{
+    $sql = "DELETE FROM tb_pet WHERE idPet = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_bind_param($comando, 'i', $idPet);
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
-    
+
     return $funcionou; //true ou false
 };
-    
-function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $telefone){
+
+function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $telefone)
+{
     $sql = "INSERT INTO tb_usuario (nome, email, senha, endereco_usuario, telefone) VALUES (?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -63,7 +66,8 @@ function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $tele
 
 
 
-function listarAnimais($conexao){
+function listarAnimais($conexao)
+{
     $sql = "SELECT * FROM tb_pet";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -79,7 +83,8 @@ function listarAnimais($conexao){
     return $lista_animais;
 };
 
-function pesquisarTipos($conexao, $tipo){
+function pesquisarTipos($conexao, $tipo)
+{
 
     $sql = "SELECT * FROM tb_pet WHERE tipo= ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -93,10 +98,10 @@ function pesquisarTipos($conexao, $tipo){
 
     mysqli_stmt_close($comando);
     return $tipos;
-
 };
 
-function pesquisarRacas($conexao, $raca){
+function pesquisarRacas($conexao, $raca)
+{
 
     $sql = "SELECT * FROM tb_pet WHERE raca= ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -110,10 +115,10 @@ function pesquisarRacas($conexao, $raca){
 
     mysqli_stmt_close($comando);
     return $racas;
+};
 
-    };
-
-function pesquisarPortes($conexao, $porte){
+function pesquisarPortes($conexao, $porte)
+{
 
     $sql = "SELECT * FROM tb_pet WHERE porte= ?";
     $comando = mysqli_prepare($conexao, $sql);
@@ -127,12 +132,13 @@ function pesquisarPortes($conexao, $porte){
 
     mysqli_stmt_close($comando);
     return $portes;
-    };
+};
 
 
 
-function pesquisarIdade($conexao, $idade){
-    
+function pesquisarIdade($conexao, $idade)
+{
+
     $sql = "SELECT * FROM tb_pet WHERE idade= ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -145,19 +151,20 @@ function pesquisarIdade($conexao, $idade){
 
     mysqli_stmt_close($comando);
     return $idades;
-    };
+};
 
-function verificarLogin($conexao, $email, $senha) {
+function verificarLogin($conexao, $email, $senha)
+{
     $sql = "SELECT * FROM tb_usuario WHERE email = ?";
 
     $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_bind_param($comando, 's', $email);
 
     mysqli_stmt_execute($comando);
-    
+
     $resultado = mysqli_stmt_get_result($comando);
     $quantidade = mysqli_num_rows($resultado);
-    
+
     $iduser = 0;
     if ($quantidade != 0) {
         $usuario = mysqli_fetch_assoc($resultado);
@@ -170,7 +177,8 @@ function verificarLogin($conexao, $email, $senha) {
     return $iduser;
 }
 
-function pegarDadosUsuario($conexao, $idUsuario) {
+function pegarDadosUsuario($conexao, $idUsuario)
+{
     $sql = "SELECT nome, email, endereco_usuario, telefone, foto FROM tb_usuario WHERE idUsuario = ?";
 
     $comando = mysqli_prepare($conexao, $sql);
@@ -179,17 +187,31 @@ function pegarDadosUsuario($conexao, $idUsuario) {
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
     $quantidade = mysqli_num_rows($resultado);
-    
+
     if ($quantidade != 0) {
         $usuario = mysqli_fetch_assoc($resultado);
         return $usuario;
-    }
-    else {
+    } else {
         return 0;
     }
 }
 
+function pegarFavoritos($conexao, $idUsuario)
+{
+    $sql = "SELECT * tb_favoritos join tb_usuario on tb_favoritos.tb_usuario_idUsuario = ? 
+    join tb_pet on tb_favoritos.tb_pet_idPet = ?";
 
+    $comando = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($comando, 'ii', $idUsuario);
 
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+    $quantidade = mysqli_num_rows($resultado);
 
-?>
+    if ($quantidade != 0) {
+        $usuario = mysqli_fetch_assoc($resultado);
+        return $usuario;
+    } else {
+        return 0;
+    }
+}

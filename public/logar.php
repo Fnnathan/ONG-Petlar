@@ -1,3 +1,34 @@
+<?php 
+require_once "../controle/conexao.php";
+require_once "../controle/funcoes.php";
+
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+
+  $idUsuario = verificarLogin($conexao, $email, $senha);
+
+    if ($idUsuario == 0) {
+        echo "Usuário não encontrado! Deseja se<a href='form_usuario.php'>cadastrar?</a>";
+        
+    }
+    else {
+        $usuario = pegarDadosUsuario($conexao, $idUsuario);
+        
+        if ($usuario == 0) {
+            header("Location:  ../public/index.php");
+        
+        }
+        else {
+            session_start();
+            $_SESSION['logado'] = 'sim';
+            $_SESSION['tipo'] = $usuario['tipo'];
+            $_SESSION['nome'] = $usuario['nome'];
+            header("Location: ../public/index.php");
+          
+        }
+      }
+?> 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
