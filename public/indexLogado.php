@@ -13,6 +13,7 @@
 <body>
 
 <div class="cabecalhoazul">
+<a href="../controle/deslogar.php">Sair</a> 
 
 
 <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>

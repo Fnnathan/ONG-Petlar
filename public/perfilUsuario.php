@@ -1,10 +1,12 @@
 <?php
 session_start();
-if (!isset($_SESSION['idUsuario'])) {
+if ($_SESSION['logado'] != 'sim') {
     header("Location: form_usuario.php");
-    exit;
+
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

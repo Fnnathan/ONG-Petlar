@@ -15,6 +15,7 @@
 <div class="cabecalhoazul">
 
 
+
 <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
 
 <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
