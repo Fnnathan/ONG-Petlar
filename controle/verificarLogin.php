@@ -21,7 +21,6 @@ require_once "funcoes.php";
         else {
             session_start();
             $_SESSION['logado'] = 'sim';
-            $_SESSION['tipo'] = $usuario['tipo'];
             $_SESSION['nome'] = $usuario['nome'];
             header("Location: ../public/index.php");
           

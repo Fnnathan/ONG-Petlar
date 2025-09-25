@@ -26,7 +26,7 @@
         <input class="input" type="text" name="telefone" placeholder="Telefone" required><br><br>
    
 
-        <input class="login-button" type="submit" value="Cadastrar">
+        <input class="login-button" type="submit" value="Cadastrar" href="index.php" >
 
          <span class="forgot-password">
                 Já está cadastrado? <a href="logar.php">Entrar</a>

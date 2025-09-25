@@ -15,10 +15,20 @@
 <div class="cabecalhoazul">
 
 
-<a href=""><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
-<a href=""><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
-<a href=""><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+<a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
 
+<a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
+<a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+
+<div id="barra" class="barra_lateral">
+    <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
+    <a href="">Adotar</a>
+    <a href="./form_pet.php">Doar</a>
+    <a href="">Gatos</a>
+    <a href="">Cachorros</a>
+    <a href="./logar.php">Login</a>
+
+</div>
 </div>
 
 <div class="cabecalhoazulescuro">
@@ -35,7 +45,7 @@
 
 </div>
 
-<a href="logar.php" target="meiuca">Entrar</a> <a href="form_usuario.php" target="meiuca">Cadastrar-se</a>
+
 
 
     <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
@@ -52,6 +62,11 @@
                 Lucas Corrêa
     </div>
 
+<script>
+document.getElementById("botao_barra").addEventListener("click", function() {
+    document.getElementById("barra").classList.toggle("active");
+});
+</script>
 
 
 </body>
