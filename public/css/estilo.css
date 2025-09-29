@@ -255,11 +255,9 @@ a.button:active {
 .barra_lateral {
   height: 100%;
   width: 0;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: #12B1D1;
-  overflow-x: hidden;
   transition: 0.3s;
   padding-top: 60px;
 }
@@ -270,7 +268,6 @@ a.button:active {
   text-decoration: none;
   font-size: 18px;
   color: white;
-  display: block;
   transition: 0.2s;
 }
 
@@ -283,6 +280,13 @@ a.button:active {
   width: 200px;
 }
 
+#Sair {
+  margin-left: 1680px;
 
+
+
+
+
+}
 
 

@@ -13,13 +13,16 @@
 <body>
 
 <div class="cabecalhoazul">
-<a href="../controle/deslogar.php">Sair</a> 
+    
 
 
 <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
 
+
 <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
 <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+<a id="Sair"href="../controle/deslogar.php"><i class="fa-solid fa-arrow-right-from-bracket" style="color:rgb(255, 255, 255);"></i></a> 
+
 
 <div id="barra" class="barra_lateral">
     <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
