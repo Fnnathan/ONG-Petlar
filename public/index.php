@@ -16,7 +16,7 @@
 
 
 
-<a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
+ <a id="botao_barra"><i href="" class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
 
 <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
 <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
@@ -64,10 +64,15 @@
     </div>
 
 <script>
-document.getElementById("botao_barra").addEventListener("click", function() {
-    document.getElementById("barra").classList.toggle("active");
+     document.getElementById("botao_barra")?.addEventListener("click", function() {
+    // Verifique se o elemento 'barra' existe antes de tentar manipular
+    const barra = document.getElementById("barra");
+    if (barra) {
+        barra.classList.toggle("active");
+    }
 });
-</script>
+    </script>
+
 
 
 </body>
