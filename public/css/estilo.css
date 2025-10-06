@@ -310,13 +310,6 @@ a.button:active {
 }
 
 
-
-<<<<<<< HEAD
-
-
-
-}
-
 .botoes-container {
     display: flex;
     justify-content: center;
@@ -325,7 +318,7 @@ a.button:active {
 }
 
 .botao {
-    background-color: #007bff; /* Cor de fundo dos botões */
+    background-color: #0d9cb9; /* Cor de fundo dos botões */
     color: white; /* Cor do texto */
     text-align: center;
     padding: 15px;
@@ -354,20 +347,46 @@ a.button:active {
     margin-top: 5px;
 }
 
-.adotar {
-    background-color: #005596 /* Cor de fundo específica para "Adotar" */
+
+/* Barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #12B1D1;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
 }
 
-.doar {
-    background-color: #005596 /* Cor de fundo específica para "Doar" */
+/* Links dentro da barra lateral */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
 }
 
-.gato {
-    background-color: #005596 /* Cor de fundo específica para "Gato" */
+/* Close button */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-.cachorro {
-    background-color: #005596 /* Cor de fundo específica para "Cachorro" */
+/* Quando a classe 'open' for adicionada, a barra lateral será visível */
+.sidebar.open {
+    width: 250px;
 }
-=======
->>>>>>> caa83c097d15bd5e55db985799311362ca2075af
+
+/* Mudando a cor ao passar o mouse sobre os links */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
