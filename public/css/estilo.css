@@ -302,7 +302,7 @@ a.button:active {
     text-align: center;
     padding: 15px;
     border-radius: 10px;
-    width: 150px;
+    width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,7 +316,7 @@ a.button:active {
 }
 
 .botao i {
-    font-size: 40px; /* Ajuste o tamanho do ícone */
+    font-size: 30px; /* Ajuste o tamanho do ícone */
     margin-bottom: 10px;
 }
 
@@ -327,17 +327,17 @@ a.button:active {
 }
 
 .adotar {
-    background-color: #ff6347; /* Cor de fundo específica para "Adotar" */
+    background-color: #005596 /* Cor de fundo específica para "Adotar" */
 }
 
 .doar {
-    background-color: #32cd32; /* Cor de fundo específica para "Doar" */
+    background-color: #005596 /* Cor de fundo específica para "Doar" */
 }
 
 .gato {
-    background-color: #4169e1; /* Cor de fundo específica para "Gato" */
+    background-color: #005596 /* Cor de fundo específica para "Gato" */
 }
 
 .cachorro {
-    background-color: #ffa500; /* Cor de fundo específica para "Cachorro" */
+    background-color: #005596 /* Cor de fundo específica para "Cachorro" */
 }
