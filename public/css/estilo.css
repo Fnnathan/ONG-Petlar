@@ -199,18 +199,33 @@ a.button:active {
   background-color: #12B1D1;
   height: 60px;
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  
+  justify-items: flex-start;
+  gap: 12px;
+  padding: 0 10px;
+
 
 }
 
+.cabecalhoazul > a {
+  display: inline-block;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  white-space: nowrap;
+  padding: 62x;
+
+
+}
+
+
+
 .cabecalhoazul i {
 
-  font-size: 35px;
-  margin: 5px;
-  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
   
 
 
@@ -221,6 +236,7 @@ a.button:active {
 #Sair {
 
   margin-left: auto;
+  
 
 
 
