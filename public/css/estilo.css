@@ -199,15 +199,28 @@ a.button:active {
   background-color: #12B1D1;
   height: 60px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
 
 }
 
 .cabecalhoazul i {
 
   font-size: 35px;
-  margin-top: 10px;
-  margin-left: 3px;
+  margin: 5px;
+  cursor: pointer;
   
+
+
+
+
+}
+
+#Sair {
+
+  margin-left: auto;
 
 
 
@@ -280,10 +293,9 @@ a.button:active {
   width: 200px;
 }
 
-#Sair {
-  margin-left: 1680px;
 
 
+<<<<<<< HEAD
 
 
 
@@ -341,3 +353,5 @@ a.button:active {
 .cachorro {
     background-color: #005596 /* Cor de fundo específica para "Cachorro" */
 }
+=======
+>>>>>>> caa83c097d15bd5e55db985799311362ca2075af
