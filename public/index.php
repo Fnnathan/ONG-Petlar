@@ -34,9 +34,26 @@
 <img src="./assets/cat.png" alt="cat" id="catcabecalho">
 
 
-
 </div>
 
+<div class="botoes-container">
+    <a href="#" class="botao adotar">
+        <i class="fa-solid fa-heart" style="font-size: 30px;"></i>
+        <p class="botao-texto">Adotar</p>
+    </a>
+    <a href="#" class="botao doar">
+        <i class="fa-solid fa-paw" style="font-size: 30px;"></i>
+        <p class="botao-texto">Doar</p>
+    </a>
+    <a href="#" class="botao gato">
+        <i class="fa-solid fa-fish" style="font-size: 30px;"></i>
+        <p class="botao-texto">Gato</p>
+    </a>
+    <a href="#" class="botao cachorro">
+        <i class="fa-solid fa-dog" style="font-size: 30px;"></i>
+        <p class="botao-texto">Cachorro</p>
+    </a>
+</div>
 
 
 
