@@ -21,15 +21,6 @@
 <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
 <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
 
-<div id="barra" class="barra_lateral">
-    <a id="botao_barra"><i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i></a>
-    <a href="">Adotar</a>
-    <a href="./form_pet.php">Doar</a>
-    <a href="">Gatos</a>
-    <a href="">Cachorros</a>
-    <a href="./logar.php">Login</a>
-
-</div>
 </div>
 
 <div class="cabecalhoazulescuro">
@@ -62,16 +53,6 @@
                 Nathan Corrêa
                 Lucas Corrêa
     </div>
-
-<script>
-     document.getElementById("botao_barra")?.addEventListener("click", function() {
-    // Verifique se o elemento 'barra' existe antes de tentar manipular
-    const barra = document.getElementById("barra");
-    if (barra) {
-        barra.classList.toggle("active");
-    }
-});
-    </script>
 
 
 
