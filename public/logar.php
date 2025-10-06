@@ -21,7 +21,7 @@
                 Não é cadastrado? <a href="./form_usuario.php">Cadastrar-se</a>
             </span>
 
-            <input class="login-button" type="submit" value="Acessar" href="./indexLogado.php"  />
+            <input class="login-button" type="submit" value="Acessar" >
         </form>
     </div>
 </body>
