@@ -390,3 +390,28 @@ a.button:active {
 .sidebar a:hover {
     color: #f1f1f1;
 }
+
+.caixa-azul {
+            background-color: #005596; /* Cor azul */
+            color: white; /* Cor do texto dentro da caixa */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            width: 300px; /* Largura da caixa */
+            margin: 0 auto; /* Centraliza a caixa */
+            text-align: left; /* Centraliza o conteúdo do texto */
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+.user-icon {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.icone-grande {
+    font-size: 120px;
+    color: #007B9E;
+    text-align: center;
+}
