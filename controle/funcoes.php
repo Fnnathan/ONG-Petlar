@@ -209,8 +209,8 @@ function pegarFavoritos($conexao, $idUsuario)
     $quantidade = mysqli_num_rows($resultado);
 
     if ($quantidade != 0) {
-        $usuario = mysqli_fetch_assoc($resultado);
-        return $usuario;
+        $usuariofv = mysqli_fetch_assoc($resultado);
+        return $usuariofv;
     } else {
         return 0;
     }
