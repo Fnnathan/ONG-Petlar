@@ -31,6 +31,7 @@
 
     <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
     <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+   
 </div>
 
 <div class="cabecalhoazulescuro">
