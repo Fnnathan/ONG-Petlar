@@ -15,7 +15,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
     <title>Favoritos</title>
 </head>
 <body>
-    <h1>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h1>
+    <h1>Bem-vindo, <?php echo $_SESSION['nome'];echo $_SESSION['idUsuario']; ?>!</h1>
     <!-- Conteúdo da página de favoritos aqui -->
 </body>
 </html>
