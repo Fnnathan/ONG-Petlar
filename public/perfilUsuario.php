@@ -11,7 +11,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favoritos</title>
      <link rel="stylesheet" href="./css/estilo.css">
@@ -20,6 +20,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
 </head>
 
 <body>
+    
 <br><br>
 <div class="icone-grande">
        <i class="bi bi-person-circle"></i>
@@ -33,6 +34,8 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
 
     <h2>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h2> <br>
     <?php echo $_SESSION['foto']; ?>
+
+ 
     <br>
         <p><strong>Nome:</strong> <?php echo $_SESSION['nome']; ?></p>
         <p><strong>E-mail:</strong> <?php echo $_SESSION['email']; ?></p>
