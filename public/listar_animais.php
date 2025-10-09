@@ -57,6 +57,7 @@
                 require_once "../controle/funcoes.php";
 
                     $lista_animais = listarAnimais($conexao);
+                    $lista_foto = listarFotos($conexao);
             ?>
             <table border="1">
             <tr>
@@ -95,7 +96,8 @@
             echo "<td><img src='fotos/ . $foto .'></td>";
             echo "</tr>";
         }
-    
+                      
+
         ?>
         
 </body>

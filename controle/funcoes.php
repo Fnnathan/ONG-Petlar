@@ -83,21 +83,21 @@ function listarAnimais($conexao)
     return $lista_animais;
 };
 
-function listar($conexao)
+function listarFotos($conexao)
 {
-    $sql = "SELECT * FROM tb_pet";
+    $sql = "SELECT * FROM tb_foto";
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
-    $lista_animais = [];
-    while ($pet = mysqli_fetch_assoc($resultado)) {
-        $lista_animais[] = $pet;
+    $lista_foto = [];
+    while ($foto = mysqli_fetch_assoc($resultado)) {
+        $lista_foto[] = $foto;
     }
 
     mysqli_stmt_close($comando);
-    return $lista_animais;
+    return $lista_foto;
 };
 
 function pesquisarTipos($conexao, $tipo)
