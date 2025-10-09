@@ -82,7 +82,7 @@
                     $porte = $animais['porte'];
                     $idade = $animais['idade'];
                     $peso = $animais['peso'];
-                    $foto = $animais['foto'];
+                    
 
             echo "<tr>";
             echo "<td>$idPet</td>";
@@ -93,10 +93,15 @@
             echo "<td>$porte</td>";
             echo "<td>$idade</td>";
             echo "<td>$peso</td>";
-            echo "<td><img src='fotos/ . $foto .'></td>";
             echo "</tr>";
         }
-                      
+          foreach ($lista_foto as $foto) {
+                    $nome = $foto['nome'];
+
+            echo "<tr>";
+            echo "<td><img src='fotos/ . $nome .'></td>";
+            echo "</tr>";
+        }            
 
         ?>
         
