@@ -92,7 +92,7 @@
             echo "<td>$porte</td>";
             echo "<td>$idade</td>";
             echo "<td>$peso</td>";
-            echo "<td><img src='fotos/$foto'></td>";
+            echo "<td><img src='fotos/ . $foto .'></td>";
             echo "</tr>";
         }
     

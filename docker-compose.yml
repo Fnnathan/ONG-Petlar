@@ -19,4 +19,4 @@ services:
       - MARIADB_USER=root
       - MARIADB_ROOT_PASSWORD=123
     ports:
-      - 3307:3306
+      - 3307:3306Petlar

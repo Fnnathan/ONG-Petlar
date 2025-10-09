@@ -29,7 +29,7 @@
     <i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i>
 </a>
 
-    <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
+    <a target= "meiuca" href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
     <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
     <a id="Sair" href="../controle/deslogar.php"><i class="fa-solid fa-arrow-right-from-bracket" style="color:rgb(255, 255, 255);"></i></a>
 </div>
@@ -40,24 +40,6 @@
     <img src="./assets/cat.png" alt="cat" id="catcabecalho">
 </div>
 
-<div class="botoes-container">
-    <a href="#" class="botao adotar">
-        <i class="fa-solid fa-heart" style="font-size: 30px;"></i>
-        <p class="botao-texto">Adotar</p>
-    </a>
-    <a href="#" class="botao doar">
-        <i class="fa-solid fa-paw" style="font-size: 30px;"></i>
-        <p class="botao-texto">Doar</p>
-    </a>
-    <a href="#" class="botao gato">
-        <i class="fa-solid fa-fish" style="font-size: 30px;"></i>
-        <p class="botao-texto">Gato</p>
-    </a>
-    <a href="#" class="botao cachorro">
-        <i class="fa-solid fa-dog" style="font-size: 30px;"></i>
-        <p class="botao-texto">Cachorro</p>
-    </a>
-</div>
 
 <iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
 
