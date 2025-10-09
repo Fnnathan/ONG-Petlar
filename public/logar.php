@@ -50,6 +50,7 @@ require_once "../controle/funcoes.php";
             session_start();
             $_SESSION['logado'] = 'sim';
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['idUsuario'] = $idUsuario['idUsuario']; 
           
             header("Location: ../public/indexLogado.php");
           
