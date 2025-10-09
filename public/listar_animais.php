@@ -98,9 +98,9 @@
           foreach ($lista_foto as $foto) {
                     $nome = $foto['nome'];
 
-            echo "<tr>";
-            echo "<td><img src='fotos/ . $nome .'></td>";
-            echo "</tr>";
+            //echo "<tr>";
+            echo"<img src='/public/assets/$nome'>";
+            //echo "</tr>";
         }            
 
         ?>
