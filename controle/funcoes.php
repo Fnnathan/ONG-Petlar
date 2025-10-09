@@ -215,20 +215,25 @@ function pegarDadosUsuario($conexao, $idUsuario)
 
 function pegarFavoritos($conexao, $idUsuario)
 {
-    $sql = "SELECT * tb_favoritos join tb_usuario on tb_favoritos.tb_usuario_idUsuario = ? 
-    join tb_pet on tb_favoritos.tb_pet_idPet = ?";
+    $sql = "SELECT p.idPet, p.nome, p.raca, p.idade, p.descricao, p.foto
+            FROM tb_pet AS p
+            INNER JOIN tb_favoritos AS f ON f.tb_pet_idPet = p.idPet
+            WHERE f.tb_usuario_idUsuario = ?";
 
     $comando = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($comando, 'ii', $idUsuario);
+    mysqli_stmt_bind_param($comando, 'i', $idUsuario); 
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
-    $quantidade = mysqli_num_rows($resultado);
 
-    if ($quantidade != 0) {
-        $usuariofv = mysqli_fetch_assoc($resultado);
-        return $usuariofv;
-    } else {
-        return 0;
+    $favoritos = [];
+    while ($pet = mysqli_fetch_assoc($resultado)) {
+        $favoritos[] = $pet; // adiciona cada pet favorito ao array
     }
+
+    mysqli_stmt_close($comando);
+
+    // Retorna lista (vazia se não tiver nenhum favorito)
+    return $favoritos;
 }
+
