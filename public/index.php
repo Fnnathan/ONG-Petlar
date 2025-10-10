@@ -14,22 +14,22 @@
 
 
 
-<!-- Barra lateral -->
+
 <div id="sidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></i></a>
-    <a href="">Doar</a>
-    <a href="#">Login</a>
+     <a href="./form_pet.php">Quero Doar</a>
+    <a href="./logar.php">Entrar</a>
 </div>
 
-<!-- Restante do conteúdo da página -->
+
 <div class="cabecalhoazul">
 
-    <!-- Botão para abrir/fechar a barra lateral -->
+   
 <a href="javascript:void(0)" id="botao_barra">
     <i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i>
 </a>
 
-    <a target= "meiuca" href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
+    <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
     <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
    
 </div>
@@ -51,12 +51,12 @@
 </div>
 
 <script>
-    // Quando o botão da barra lateral for clicado
+ 
     $('#botao_barra').click(function() {
         $('#sidebar').toggleClass('open');
     });
 
-    // Quando o botão de fechar for clicado
+
     $('.closebtn').click(function() {
         $('#sidebar').removeClass('open');
     });
