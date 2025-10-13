@@ -55,7 +55,6 @@ INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (10, 4);
 
 
 ------------------------------------------------------------------------------------------------------------------------
-
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (1, '1.png', 1);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (2, '2.png', 1);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (3, '3.png', 1);
