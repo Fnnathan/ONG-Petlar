@@ -78,6 +78,7 @@ INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (13, 'nina_1.jpg', 5);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (14, 'nina_2.jpg', 5);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (15, 'nina_3.jpg', 5);
 
+<<<<<<< Updated upstream
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (16, 'max_1.jpg', 6);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (17, 'max_2.jpg', 6);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (18, 'max_3.jpg', 6);
@@ -97,3 +98,5 @@ INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (27, 'bolinha_3.jpg', 9)
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (28, 'frajola_1.jpg', 10);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (29, 'frajola_2.jpg', 10);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (30, 'frajola_3.jpg', 10);
+=======
+>>>>>>> Stashed changes

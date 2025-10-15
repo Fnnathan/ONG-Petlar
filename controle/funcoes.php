@@ -65,7 +65,6 @@ function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $tele
 }
 
 
-
 function listarAnimais($conexao)
 {
     $sql = "SELECT * FROM tb_pet";
