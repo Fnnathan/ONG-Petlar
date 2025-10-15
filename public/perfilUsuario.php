@@ -138,32 +138,32 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             <h2 class="perfil-titulo">Informações Pessoais</h2>
 
             <div class="perfil-linha">
-                <strong>Nome</strong>
-                <span><?php echo $_SESSION['nome']; ?></span>
+                Nome
+                <?php echo $_SESSION['nome']; ?>
                 <i class="fa-solid fa-pen-to-square perfil-editar"></i>
             </div>
 
             <div class="perfil-linha">
-                <strong>Email</strong>
-                <span><?php echo $_SESSION['email']; ?></span>
+                Email
+                <?php echo $_SESSION['email']; ?>
                 <i class="fa-solid fa-pen-to-square perfil-editar"></i>
             </div>
 
             <div class="perfil-linha">
-                <strong>Senha</strong>
-                <span>****</span>
+                Senha
+                ****
                 <i class="fa-solid fa-pen-to-square perfil-editar"></i>
             </div>
 
             <div class="perfil-linha">
-                <strong>Endereço</strong>
-                <span><?php echo $_SESSION['endereco_usuario']; ?></span>
+                Endereço
+                <?php echo $_SESSION['endereco_usuario']; ?>
                 <i class="fa-solid fa-pen-to-square perfil-editar"></i>
             </div>
 
             <div class="perfil-linha">
-                <strong>Telefone</strong>
-                <span><?php echo $_SESSION['telefone']; ?></span>
+                Telefone
+                <?php echo $_SESSION['telefone']; ?>
                 <i class="fa-solid fa-pen-to-square perfil-editar"></i>
             </div>
 
