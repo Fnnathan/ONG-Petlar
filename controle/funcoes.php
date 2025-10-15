@@ -23,9 +23,7 @@ function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $po
     $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=? WHERE idPet=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    // varchar, string, data -> s
-    // inteiro -> i
-    // dinheiro, decimal -> d
+   
     mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet);
 
 

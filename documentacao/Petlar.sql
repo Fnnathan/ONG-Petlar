@@ -137,17 +137,17 @@ INSERT INTO tb_usuario (idUsuario, nome, email, senha, endereco_usuario, telefon
 (10, 'Juliana Prado', 'juliana@email.com', 'jul123', 'Rua J, 1000', '11999990010');
 
 ---------------------------------------------------------------------------------------------------------------------------
-INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario) VALUES
-(1, 'Thor', 'Rua A, 100', 'Cão', 'Labrador', 'Grande', 3, 30.5, 1),
-(2, 'Mia', 'Av B, 200', 'Gato', 'Siamês', 'Pequeno', 2, 4.2, 2),
-(3, 'Luna', 'Rua C, 300', 'Cão', 'Poodle', 'Pequeno', 4, 8.0, 3),
-(4, 'Bob', 'Rua D, 400', 'Cão', 'Vira-lata', 'Médio', 5, 15.0, 4),
-(5, 'Nina', 'Av E, 500', 'Gato', 'Persa', 'Pequeno', 1, 3.8, 5),
-(6, 'Max', 'Rua F, 600', 'Cão', 'Pastor Alemão', 'Grande', 6, 35.0, 6),
-(7, 'Mel', 'Rua G, 700', 'Gato', 'Angorá', 'Pequeno', 2, 4.0, 7),
-(8, 'Rex', 'Av H, 800', 'Cão', 'Pitbull', 'Grande', 4, 28.7, 8),
-(9, 'Bolinha', 'Rua I, 900', 'Cão', 'Beagle', 'Médio', 3, 12.0, 9),
-(10, 'Frajola', 'Rua J, 1000', 'Gato', 'SRD', 'Pequeno', 5, 5.5, 10);
+INSERT INTO tb_pet (idPet, nome, endereco_pet, tipo, raca, genero, porte, idade, peso, tb_usuario_idUsuario) VALUES
+(1, 'Thor', 'Rua A, 100', 'Cão', 'Labrador', 'macho', 'Grande', 3, 30.5, 1),
+(2, 'Mia', 'Av B, 200', 'Gato', 'Siamês', 'fêmea', 'Pequeno', 2, 4.2, 2),
+(3, 'Luna', 'Rua C, 300', 'Cão', 'Poodle', 'fêmea', 'Pequeno', 4, 8.0, 3),
+(4, 'Bob', 'Rua D, 400', 'Cão', 'Vira-lata', 'macho', 'Médio', 5, 15.0, 4),
+(5, 'Nina', 'Av E, 500', 'Gato', 'Persa', 'fêmea', 'Pequeno', 1, 3.8, 5),
+(6, 'Max', 'Rua F, 600', 'Cão', 'Pastor Alemão', 'macho', 'Grande', 6, 35.0, 6),
+(7, 'Mel', 'Rua G, 700', 'Gato', 'Angorá', 'fêmea', 'Pequeno', 2, 4.0, 7),
+(8, 'Rex', 'Av H, 800', 'Cão', 'Pitbull', 'macho', 'Grande', 4, 28.7, 8),
+(9, 'Bolinha', 'Rua I, 900', 'Cão', 'Beagle', 'fêmea', 'Médio', 3, 12.0, 9),
+(10, 'Frajola', 'Rua J, 1000', 'Gato', 'SRD', 'macho', 'Pequeno', 5, 5.5, 10);
 
 ------------------------------------------------------------------------------------------------------------------------
 INSERT INTO tb_adocao (idAdocao, data_adocao, tb_pet_idPet, tb_usuario_idUsuario) VALUES
@@ -183,41 +183,29 @@ INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (10, 4);
 ------------------------------------------------------------------------------------------------------------------------
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (1, 'thor_1.jpg', 1);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (2, 'thor_2.jpg', 1);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (3, 'thor_3.jpg', 1);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (4, 'mia_1.jpg', 2);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (5, 'mia_2.jpg', 2);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (6, 'mia_3.jpg', 2);
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (7, 'luna_1.jpg', 3);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (8, 'luna_2.jpg', 3);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (9, 'luna_3.jpg', 3);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (10, 'bob_1.jpg', 4);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (11, 'bob_2.jpg', 4);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (12, 'bob_3.jpg', 4);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (13, 'nina_1.jpg', 5);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (14, 'nina_2.jpg', 5);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (15, 'nina_3.jpg', 5);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (16, 'max_1.jpg', 6);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (17, 'max_2.jpg', 6);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (18, 'max_3.jpg', 6);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (19, 'mel_1.jpg', 7);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (20, 'mel_2.jpg', 7);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (21, 'mel_3.jpg', 7);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (22, 'rex_1.jpg', 8);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (23, 'rex_2.jpg', 8);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (24, 'rex_3.jpg', 8);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (25, 'bolinha_1.jpg', 9);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (26, 'bolinha_2.jpg', 9);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (27, 'bolinha_3.jpg', 9);
+
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (28, 'frajola_1.jpg', 10);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (29, 'frajola_2.jpg', 10);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (30, 'frajola_3.jpg', 10);
