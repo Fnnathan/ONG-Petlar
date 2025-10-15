@@ -1,9 +1,0 @@
-select * from tb_favoritos;
-insert into tb_favoritos values (3, 10);
-select * from tb_pet;
-SELECT * from tb_favoritos join tb_usuario on tb_favoritos.tb_usuario_idUsuario = 3 join tb_pet on tb_favoritos.tb_pet_idPet = 3;
-
-select p.nome, p.raca
-from tb_pet as p
-join tb_favoritos on tb_favoritos.tb_pet_idPet = p.idPet
-where tb_favoritos.tb_usuario_idUsuario = 3;

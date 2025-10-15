@@ -1,3 +1,5 @@
+
+-------------------------------------------------------------------------------------------------
 INSERT INTO tb_usuario (idUsuario, nome, email, senha, endereco_usuario, telefone) VALUES
 (1, 'Ana Souza', 'ana@email.com', 'senha123', 'Rua A, 100', '11999990001'),
 (2, 'Carlos Lima', 'carlos@email.com', 'abc123', 'Av B, 200', '11999990002'),
@@ -55,16 +57,10 @@ INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (10, 4);
 
 
 ------------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (1, '1.png', 1);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (2, '2.png', 1);
-INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (3, '3.png', 1);
-=======
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (1, 'thor_1.jpg', 1);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (2, 'thor_2.jpg', 1);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (3, 'thor_3.jpg', 1);
->>>>>>> parent of 7cc58db (f)
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (4, 'mia_1.jpg', 2);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (5, 'mia_2.jpg', 2);
@@ -75,16 +71,29 @@ INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (8, 'luna_2.jpg', 3);
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (9, 'luna_3.jpg', 3);
 
 INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (10, 'bob_1.jpg', 4);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (11, 'bob_2.jpg', 4);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (12, 'bob_3.jpg', 4);
 
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (13, 'nina_1.jpg', 5);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (14, 'nina_2.jpg', 5);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (15, 'nina_3.jpg', 5);
 
-INSERT INTO tb_foto (nome, tb_pet_idPet) VALUES
-('1.png', 1),
-('2.png', 2),
-('3.png', 3),
-('4.png', 4),
-('5.png', 5),
-('6.png', 6),
-('7.png', 7),
-('8.png', 8),
-('9.png', 9),
-('10.png', 10);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (16, 'max_1.jpg', 6);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (17, 'max_2.jpg', 6);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (18, 'max_3.jpg', 6);
+
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (19, 'mel_1.jpg', 7);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (20, 'mel_2.jpg', 7);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (21, 'mel_3.jpg', 7);
+
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (22, 'rex_1.jpg', 8);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (23, 'rex_2.jpg', 8);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (24, 'rex_3.jpg', 8);
+
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (25, 'bolinha_1.jpg', 9);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (26, 'bolinha_2.jpg', 9);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (27, 'bolinha_3.jpg', 9);
+
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (28, 'frajola_1.jpg', 10);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (29, 'frajola_2.jpg', 10);
+INSERT INTO tb_foto (idfoto, nome, tb_pet_idPet) VALUES (30, 'frajola_3.jpg', 10);
