@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuário</title>
-  <link rel="stylesheet" href="./css/estilo.css"> <!-- ou o nome do seu CSS -->
+  <link rel="stylesheet" href="./css/estilo.css"> 
 </head>
 
 <body>
