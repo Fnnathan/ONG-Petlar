@@ -218,6 +218,7 @@ function pegarFavoritos($conexao, $idUsuario)
                 p.endereco_pet,
                 p.raca,
                 p.idade,
+                p.genero,
                 fto.nome AS foto
             FROM tb_pet AS p
             INNER JOIN tb_favoritos AS fav ON fav.tb_pet_idPet = p.idPet
@@ -239,3 +240,19 @@ function pegarFavoritos($conexao, $idUsuario)
     return $favoritos;
 }
 
+function pesquisarGenero($conexao, $tipo)
+{
+
+    $sql = "SELECT * FROM tb_pet WHERE genero= ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $tipo);
+
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
+
+    $generos = mysqli_fetch_assoc($resultado);
+
+    mysqli_stmt_close($comando);
+    return $generos;
+};

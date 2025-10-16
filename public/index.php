@@ -17,8 +17,9 @@
 
 <div id="sidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></i></a>
-     <a href="./form_pet.php">Quero Doar</a>
     <a href="./logar.php">Entrar</a>
+    <a href="./form_pet.php">Quero Doar</a>
+    <a href="./listar_animais.php">Quero Adotar</a>
 </div>
 
 
