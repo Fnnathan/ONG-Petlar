@@ -28,7 +28,7 @@
        
     </div>
 
- <div id="criar_conta">
+ <div class="msg_form">
             <h3>Criar uma conta é rápido, fácil e gratuito!</h3><br>
             Com a sua conta da Petlar você tem acesso a doações e a adoções! <br><br>
             <a href="./form_usuario.php">Criar minha conta</a>

@@ -19,7 +19,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
 <body>
     <div class="cabecalhoazulescuro">
         <img src="./assets/dog.png" alt="dog" id="dogcabecalho">
-        <img src="./assets/logo.png" alt="logo" id="logo.png">
+         <a href="./indexLogado.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
         <img src="./assets/cat.png" alt="cat" id="catcabecalho">
     </div>
 

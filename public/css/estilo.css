@@ -44,14 +44,14 @@
 
 
 
-#criar_conta {
+.msg_form {
   max-width: 350px;
-  background: #F8F9FD;
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+ 
+ 
   border-radius: 40px;
   padding: 25px 35px;
-  border: 5px solid rgb(255, 255, 255);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+ 
+  
   margin: 40px auto;
   margin-right:470px ;
   margin-top: 15px;
@@ -247,7 +247,7 @@ a.button:active {
   transition: 0.3s;
 }
 
-/* Close button */
+/* fehcar */
 .sidebar .closebtn {
   position: absolute;
   top: 3px;
@@ -257,12 +257,12 @@ a.button:active {
 
 }
 
-/* Quando a classe 'open' for adicionada, a barra lateral será visível */
+/* Quando a classe 'open' for adicionada, a barra lateral aparece*/
 .sidebar.open {
   width: 250px;
 }
 
-/* Mudando a cor ao passar o mouse sobre os links */
+/* passar o mouse nos links */
 .sidebar a:hover {
   background-color: #0d9cb9;
 }
@@ -292,3 +292,106 @@ a.button:active {
     text-align: center;
 }
 
+    /* Perfil usuario */
+        .perfil-container {
+            background-color: #f2f8ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .perfil-caixa {
+            background-color: #0066a2;
+            color: white;
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+
+        .perfil-topo {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .perfil-btn-sair {
+            text-decoration: none;
+            color: white;
+            background-color: #0277aa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .perfil-btn-sair:hover {
+            background-color: #015d82;
+        }
+
+        .perfil-icone {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .perfil-icone i {
+            font-size: 70px;
+            color: #ccefff;
+        }
+
+        .perfil-titulo {
+            text-align: center;
+            color: #aee0ff;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .perfil-linha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0077bb;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .perfil-linha strong {
+            width: 100px;
+        }
+
+        .perfil-linha span {
+            flex: 1;
+            text-align: left;
+        }
+
+        .perfil-editar {
+            color: #ccefff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .perfil-editar:hover {
+            color: white;
+        }
+
+        .perfil-btn-enviar {
+            background-color: white;
+            color: #0066a2;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 30px auto 0;
+            transition: 0.3s;
+        }
+
+        .perfil-btn-enviar:hover {
+            background-color: #e6f5ff;
+        }
