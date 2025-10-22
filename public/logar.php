@@ -34,6 +34,7 @@
             <a href="./form_usuario.php">Criar minha conta</a>
 </div>
 
+
 </body>
 
 <?php
@@ -46,7 +47,7 @@ $senha = $_POST['senha'];
 $idUsuario = verificarLogin($conexao, $email, $senha);
 
 if ($idUsuario == 0) {
-    echo "Usuário não encontrado! Deseja se<a href='form_usuario.php'>cadastrar?</a>";
+   
 } else {
     $usuario = pegarDadosUsuario($conexao, $idUsuario);
 
