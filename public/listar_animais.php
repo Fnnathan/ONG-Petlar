@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar animais</title>
-
-    <style>
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
-
+    <link rel="stylesheet" href="./css/estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -44,7 +36,7 @@
 
   <div class="col">
     <div class="card h-100">
-        <img src="<?php echo $foto_pet; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
+        <img class="card_pet" src="./assets/<?php echo $foto_pet; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
         <div class="card-body">
             <h5 class="card-title"><?php echo $nome; ?></h5>
             <p class="card-text"><strong>Endereço:</strong> <?php echo $endereco_pet; ?></p>

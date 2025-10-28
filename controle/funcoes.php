@@ -1,30 +1,27 @@
 <?php
-function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso)
+function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero)
 {
-
-    $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario) VALUES (?, ?, ?, ?, ?, ?, ? )";
+    $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso);
+    mysqli_stmt_bind_param($comando, 'sssssdids', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
     mysqli_stmt_execute($comando);
 
-    // retorna o valor do id que acabou de ser inserido
     $idPet = mysqli_insert_id($conexao);
-
     mysqli_stmt_close($comando);
-
     return $idPet;
-};
+}
 
-function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso)
+
+function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $genero)
 {
 
-    $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=? WHERE idPet=?";
+    $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=?, genero=? WHERE idPet=?";
     $comando = mysqli_prepare($conexao, $sql);
 
    
-    mysqli_stmt_bind_param($comando, 'sssssidi', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet);
+    mysqli_stmt_bind_param($comando, 'sssssidis', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet, $genero);
 
 
     $funcionou = mysqli_stmt_execute($comando);

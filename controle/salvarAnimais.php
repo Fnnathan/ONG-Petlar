@@ -1,4 +1,5 @@
 <?php
+
 require_once "conexao.php";
 require_once "funcoes.php";
 
@@ -9,9 +10,10 @@ $raca = $_POST['raca'];
 $porte = $_POST['porte'];
 $idade = $_POST['idade'];
 $peso = $_POST['peso'];
+$genero = $_POST['genero'];
+$idUsuario = $_SESSION['idUsuario']; 
 
+salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
+header("location:../public/indexLogado.php");
 
-
-salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso );
-header("location:index.php");
 ?>

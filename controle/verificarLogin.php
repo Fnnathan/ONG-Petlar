@@ -1,7 +1,7 @@
 <?php
 require_once "conexao.php";
 require_once "funcoes.php";
-session_start();
+
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
@@ -9,13 +9,13 @@ $idUsuario = verificarLogin($conexao, $email, $senha);
 
 if ($idUsuario == 0) {
     echo 'Usuário não encontrado!';
-    exit;
+    
 } else {
     $usuario = pegarDadosUsuario($conexao, $idUsuario);
 
     if ($usuario == 0) {
         header("Location: ../public/index.php");
-        exit;
+        
     } else {
         $_SESSION['logado'] = 'sim';
         $_SESSION['idUsuario'] = $idUsuario;
@@ -26,6 +26,6 @@ if ($idUsuario == 0) {
         $_SESSION['foto'] = $usuario['foto'];
 
         header("Location: ../public/indexLogado.php");
-        exit;
+        
     }
 }

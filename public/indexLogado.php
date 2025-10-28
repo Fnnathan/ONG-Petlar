@@ -18,7 +18,7 @@
 <div id="sidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></i></a>
     <a href="./form_pet.php">Quero Doar</a>
-    <a href="./logar.php">Entrar</a>
+    <a target="meiuca" href="./listar_animais.php">Quero Adotar</a>
 </div>
 
 
@@ -36,12 +36,12 @@
 
 <div class="cabecalhoazulescuro">
     <img src="./assets/dog.png" alt="dog" id="dogcabecalho">
-    <img src="./assets/logo.png" alt="logo" id="logo.png">
+     <a target="meiuca" href="./inicio.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
     <img src="./assets/cat.png" alt="cat" id="catcabecalho">
 </div>
 
 
-<iframe src="./listar_animais.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
+<iframe src="./inicio.php" name="meiuca" class="iframemeio" frameborder="3" style="width:100%; height:900px;"></iframe>
 
 <div class="footer">
     Adote, apoie, mude vidas. Juntos por um futuro melhor para os pets!

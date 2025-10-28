@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
     header("Location: ./logar.php");
 }
@@ -32,12 +31,15 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             Endereço do pet: <br>
             <input class="input" type="text" name="endereco_pet"> <br><br>
 
-            Tipo: <br><br>
+            <br>
             Cachorro<input type="radio" value="Cachorro" name="tipo">Gato<input type="radio" value="Gato" name="tipo"> <br><br>
-
+            Genêro: <br><br>
+            Macho<input value="Macho" type="radio" name="genero"> Fêmea<input type="radio" value="Fêmea" name="genero"> <br><br>
+           
 
             Porte: <br><br>
             Grande<input value="Grande" type="radio" name="porte"> Médio<input type="radio" value="Médio" name="porte"> Pequeno<input type="radio" value="Pequeno" name="porte"> <br><br>
+           
             Raça: <br>
             <input class="input" type="text" name="raca"> <br><br>
             Idade: <br>
@@ -45,7 +47,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             Peso: <br>
             <input class="input" type="text" name="peso"> <br><br>
             Foto do Pet: <br>
-            <input class="input" type="file" name="foto"> <br><br>
+            <input type="file" name="foto"> <br><br>
 
             <input class="input" type="submit" value="Cadastrar">
 </body>

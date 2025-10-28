@@ -37,31 +37,4 @@
 
 </body>
 
-<?php
-require_once "../controle/conexao.php";
-require_once "../controle/funcoes.php";
-
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-
-$idUsuario = verificarLogin($conexao, $email, $senha);
-
-if ($idUsuario == 0) {
-   
-} else {
-    $usuario = pegarDadosUsuario($conexao, $idUsuario);
-
-    if ($usuario == 0) {
-        header("Location:  ../public/index.php");
-    } else {
-        session_start();
-        $_SESSION['logado'] = 'sim';
-        $_SESSION['nome'] = $usuario['nome'];
-        $_SESSION['idUsuario'] = $idUsuario['idUsuario'];
-
-        header("Location: ../public/indexLogado.php");
-    }
-}
-?>
-
 </html>

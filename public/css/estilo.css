@@ -1,4 +1,3 @@
-
 .container {
   max-width: 350px;
   background: #F8F9FD;
@@ -8,7 +7,7 @@
   border: 5px solid rgb(255, 255, 255);
   box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
   margin: 40px auto;
-  margin-left:470px ;
+  margin-left: 470px;
 }
 
 .heading {
@@ -46,16 +45,16 @@
 
 .msg_form {
   max-width: 350px;
- 
- 
+
+
   border-radius: 40px;
   padding: 25px 35px;
- 
-  
+
+
   margin: 40px auto;
-  margin-right:470px ;
+  margin-right: 470px;
   margin-top: 15px;
-  
+
 }
 
 
@@ -268,130 +267,170 @@ a.button:active {
 }
 
 .caixa-azul {
-            background-color: #005596; /* Cor azul */
-            color: white; /* Cor do texto dentro da caixa */
-            padding: 20px; /* Espaçamento interno */
-            border-radius: 10px; /* Bordas arredondadas */
-            width: 300px; /* Largura da caixa */
-            margin: 0 auto; /* Centraliza a caixa */
-            text-align: left; /* Centraliza o conteúdo do texto */
-            font-family: Arial, sans-serif;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+  background-color: #005596;
+  /* Cor azul */
+  color: white;
+  /* Cor do texto dentro da caixa */
+  padding: 20px;
+  /* Espaçamento interno */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  width: 300px;
+  /* Largura da caixa */
+  margin: 0 auto;
+  /* Centraliza a caixa */
+  text-align: left;
+  /* Centraliza o conteúdo do texto */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .user-icon {
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    margin-bottom: 10px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .icone-grande {
-    font-size: 120px;
-    color: #007B9E;
-    text-align: center;
+  font-size: 120px;
+  color: #007B9E;
+  text-align: center;
 }
 
-    /* Perfil usuario */
-        .perfil-container {
-            background-color: #f2f8ff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 40px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+/* Perfil usuario */
+.perfil-container {
+  background-color: #f2f8ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        .perfil-caixa {
-            background-color: #0066a2;
-            color: white;
-            width: 600px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            padding: 40px;
-        }
+.perfil-caixa {
+  background-color: #0066a2;
+  color: white;
+  width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+}
 
-        .perfil-topo {
-            display: flex;
-            justify-content: flex-end;
-        }
+.perfil-topo {
+  display: flex;
+  justify-content: flex-end;
+}
 
-        .perfil-btn-sair {
-            text-decoration: none;
-            color: white;
-            background-color: #0277aa;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: 0.3s;
-            font-size: 14px;
-        }
+.perfil-btn-sair {
+  text-decoration: none;
+  color: white;
+  background-color: #0277aa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 14px;
+}
 
-        .perfil-btn-sair:hover {
-            background-color: #015d82;
-        }
+.perfil-btn-sair:hover {
+  background-color: #015d82;
+}
 
-        .perfil-icone {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.perfil-icone {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-        .perfil-icone i {
-            font-size: 70px;
-            color: #ccefff;
-        }
+.perfil-icone i {
+  font-size: 70px;
+  color: #ccefff;
+}
 
-        .perfil-titulo {
-            text-align: center;
-            color: #aee0ff;
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
+.perfil-titulo {
+  text-align: center;
+  color: #aee0ff;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
 
-        .perfil-linha {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #0077bb;
-            padding: 12px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-            font-size: 18px;
-        }
+.perfil-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077bb;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 18px;
+}
 
-        .perfil-linha strong {
-            width: 100px;
-        }
+.perfil-linha strong {
+  width: 100px;
+}
 
-        .perfil-linha span {
-            flex: 1;
-            text-align: left;
-        }
+.perfil-linha span {
+  flex: 1;
+  text-align: left;
+}
 
-        .perfil-editar {
-            color: #ccefff;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.perfil-editar {
+  color: #ccefff;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-        .perfil-editar:hover {
-            color: white;
-        }
+.perfil-editar:hover {
+  color: white;
+}
 
-        .perfil-btn-enviar {
-            background-color: white;
-            color: #0066a2;
-            font-weight: bold;
-            border: none;
-            border-radius: 20px;
-            padding: 12px 25px;
-            cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin: 30px auto 0;
-            transition: 0.3s;
-        }
+.perfil-btn-enviar {
+  background-color: white;
+  color: #0066a2;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 30px auto 0;
+  transition: 0.3s;
+}
 
-        .perfil-btn-enviar:hover {
-            background-color: #e6f5ff;
+.perfil-btn-enviar:hover {
+  background-color: #e6f5ff;
+}
+
+
+/*estilo do slide*/
+.swiper {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* setas do slide*/
+.swiper-button-next,
+.swiper-button-prev {
+  color: #005596;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+}
+
+
+/* estilo dos cards */
+
+ .card_pet {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
