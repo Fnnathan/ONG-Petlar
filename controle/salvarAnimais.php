@@ -13,7 +13,10 @@ $peso = $_POST['peso'];
 $genero = $_POST['genero'];
 $idUsuario = $_SESSION['idUsuario']; 
 
-salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
+$idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
+
+// salvarFoto($conexao, $idPet, $foto);
+
 header("location:../public/indexLogado.php");
 
 ?>

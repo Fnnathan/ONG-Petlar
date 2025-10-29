@@ -1,6 +1,7 @@
 <?php
 require_once "conexao.php";
 require_once "funcoes.php";
+session_start();
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];

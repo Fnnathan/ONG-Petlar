@@ -14,7 +14,7 @@
     require_once "../controle/funcoes.php";
 
     $lista_animais = listarAnimais($conexao);
-    $lista_foto = listarFotos($conexao);
+    // $lista_foto = listarFotos($conexao);
 ?>
 
 <h1>Lista de Animais</h1>
@@ -31,12 +31,14 @@
         $idade = $animais['idade'];
         $peso = $animais['peso'];
 
+        $foto_pet = listarFotos($conexao, $idPet);
+
        
 ?>
 
   <div class="col">
     <div class="card h-100">
-        <img class="card_pet" src="./assets/<?php echo $foto_pet; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
+        <img class="card_pet" src="./assets/<?php echo $foto_pet[0]; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
         <div class="card-body">
             <h5 class="card-title"><?php echo $nome; ?></h5>
             <p class="card-text"><strong>Endereço:</strong> <?php echo $endereco_pet; ?></p>

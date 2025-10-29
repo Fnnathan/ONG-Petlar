@@ -80,6 +80,8 @@ function listarAnimais($conexao)
 function listarFotos($conexao)
 {
     $sql = "SELECT * FROM tb_foto";
+    // $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
+    // bindparam
     $comando = mysqli_prepare($conexao, $sql);
 
     mysqli_stmt_execute($comando);
