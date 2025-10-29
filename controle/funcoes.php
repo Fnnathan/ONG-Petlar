@@ -63,7 +63,9 @@ function editarUsuario($conexao, $idUsuario, $nome, $email, $senha, $endereco_us
     $sql = "UPDATE tb_usuario SET nome=?, email=?, senha=?, endereco_usuario=?, telefone=? WHERE idUsuario=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-    mysqli_stmt_bind_param($comando, 'sssssi', $nome, $email, $senha, $endereco_usuario, $telefone, $idUsuario);
+     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($comando, 'sssssi', $nome, $email, $senha_hash, $endereco_usuario, $telefone, $idUsuario);
 
     $funcionou = mysqli_stmt_execute($comando);
 
