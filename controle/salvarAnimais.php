@@ -15,7 +15,7 @@ $idUsuario = $_SESSION['idUsuario'];
 
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
-// salvarFoto($conexao, $idPet, $foto);
+listarFotos($conexao, $idPet, $foto);
 
 header("location:../public/indexLogado.php");
 
