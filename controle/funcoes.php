@@ -88,7 +88,19 @@ function listarAnimais($conexao)
     mysqli_stmt_close($comando);
     return $lista_animais;
 };
+function salvarFotos($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero)
+{
+    $sql = "INSERT INTO tb_pet (nome, endereco_pet, tipo, raca, porte, idade, peso, tb_usuario_idUsuario, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'sssssdids', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
+
+    mysqli_stmt_execute($comando);
+
+    $idPet = mysqli_insert_id($conexao);
+    mysqli_stmt_close($comando);
+    return $idPet;
+}
 function listarFotos($conexao)
 {
     $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
