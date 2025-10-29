@@ -20,7 +20,7 @@ function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $po
     $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=?, genero=? WHERE idPet=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-   
+
     mysqli_stmt_bind_param($comando, 'sssssidis', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet, $genero);
 
 
@@ -51,15 +51,25 @@ function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $tele
 
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($comando, "ssssi", $nome, $email, $senha_hash, $endereco_usuario, $telefone);
+    mysqli_stmt_bind_param($comando, "sssss", $nome, $email, $senha_hash, $endereco_usuario, $telefone);
 
     $funcionou = mysqli_stmt_execute($comando);
     mysqli_stmt_close($comando);
-
     return $funcionou;
 }
 
+function editarUsuario($conexao, $idUsuario, $nome, $email, $senha, $endereco_usuario, $telefone)
+{
+    $sql = "UPDATE tb_usuario SET nome=?, email=?, senha=?, endereco_usuario=?, telefone=? WHERE idUsuario=?";
+    $comando = mysqli_prepare($conexao, $sql);
 
+    mysqli_stmt_bind_param($comando, 'sssssi', $nome, $email, $senha, $endereco_usuario, $telefone, $idUsuario);
+
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    return $funcionou;
+}
 function listarAnimais($conexao)
 {
     $sql = "SELECT * FROM tb_pet";
@@ -79,10 +89,11 @@ function listarAnimais($conexao)
 
 function listarFotos($conexao)
 {
-    $sql = "SELECT * FROM tb_foto";
-    // $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
-    // bindparam
+    $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
+  
     $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idPet);
 
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
