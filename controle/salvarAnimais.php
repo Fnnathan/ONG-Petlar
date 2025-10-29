@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "conexao.php";
 require_once "funcoes.php";
 
@@ -15,7 +15,7 @@ $idUsuario = $_SESSION['idUsuario'];
 
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
-listarFotos($conexao, $idPet, $foto);
+salvarFotos($conexao, $idPet, $foto);
 
 header("location:../public/indexLogado.php");
 
