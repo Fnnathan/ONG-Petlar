@@ -14,7 +14,7 @@
     require_once "../controle/funcoes.php";
 
     $lista_animais = listarAnimais($conexao);
-    $lista_foto = listarFotos($conexao);
+    
 ?>
 
 <h1>Lista de Animais</h1>
