@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuário</title>
   <link rel="stylesheet" href="./css/estilo.css"> 
+  <script src="../jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
       Senha: <br>
       <input class="input" type="password" name="senha" placeholder="Senha" required><br><br>
-
+       
       Endereço: <br>
       <input class="input" type="text" name="endereco_usuario" placeholder="Endereço" required><br><br>
 
