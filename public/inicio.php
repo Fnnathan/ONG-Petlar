@@ -19,9 +19,9 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="./assets/slide1.png" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="./assets/slide2.png" alt="Slide 2"></div>
-            <div class="swiper-slide"><img src="./assets/slide3.png" alt="Slide 3"></div>
+            <div class="swiper-slide"><img src="./assets/slide1.jpg" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="./assets/slide2.jpg" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="./assets/slide3.jpg" alt="Slide 3"></div>
 
         </div>
         <!-- If we need navigation buttons -->
