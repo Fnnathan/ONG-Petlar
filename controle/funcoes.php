@@ -101,7 +101,7 @@ function salvarFotos($conexao, $nome, $idPet)
     mysqli_stmt_close($comando);
     return $idPet;
 }
-function listarFotos($conexao)
+function listarFotos($conexao, $idPet)
 {
     $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
   

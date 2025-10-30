@@ -38,7 +38,7 @@
 
   <div class="col">
     <div class="card h-100">
-        <img class="card_pet" src="./assets/<?php echo $foto_pet[0]; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
+        <img class="card_pet" src="./assets/<?php echo $foto_pet[0]['nome']; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
         <div class="card-body">
             <h5 class="card-title"><?php echo $nome; ?></h5>
             <p class="card-text"><strong>Endereço:</strong> <?php echo $endereco_pet; ?></p>
