@@ -101,7 +101,7 @@ function salvarFotos($conexao, $nome, $idPet, $foto)
     mysqli_stmt_close($comando);
     return $idPet;
 }
-function listarFotos($conexao, $idPet)
+function     listarFotos($conexao, $idPet)
 {
     $sql = "SELECT * FROM tb_foto WHERE tb_pet_idPet = ?";
   
@@ -280,3 +280,25 @@ function pesquisarGenero($conexao, $tipo)
     mysqli_stmt_close($comando);
     return $generos;
 };
+
+function desfavoritarPet($conexao, $idUsuario, $idPet) {
+    $sql = "DELETE FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'ii', $idUsuario, $idPet);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    
+    return $funcionou; }
+
+function favoritarPet($conexao, $idUsuario, $idPet) {
+    $sql = "INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (?, ?)";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'ii', $idUsuario, $idPet);
+    $funcionou = mysqli_stmt_execute($comando);
+
+    mysqli_stmt_close($comando);
+    
+    return $funcionou; }
