@@ -31,9 +31,7 @@ $caminho_destino = "fotos/" . $novo_nome;
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
 if ($id == 0) {
-    salvarCliente($conexao, $nome, $cpf, $endereco, $novo_nome);
-} else {
-    editarCliente($conexao, $nome, $cpf, $endereco, $id);
+    salvarFotos($conexao, $nome, $cpf, $endereco, $novo_nome);
 }
 // tem que adaptar, alguem por favor faz isso
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
