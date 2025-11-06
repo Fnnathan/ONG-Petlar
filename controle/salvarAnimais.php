@@ -25,19 +25,18 @@ $novo_nome = uniqid() . "." . $extensao;
 //criando um novo caminho para o arquivo (usando o endereço da página)
 //lembre-se de criar a pasta "fotos/" dentro da pasta "codigo".
 //deve ajustar as permissões da pasta "fotos".
-$caminho_destino = "fotos/" . $novo_nome;
+$caminho_destino = "assets/" . $novo_nome;
 
 //movendo o arquivo para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
 if ($id == 0) {
-    salvarFotos($conexao, $nome, $cpf, $endereco, $novo_nome);
-}
+    salvarFotos($conexao, $nome, $idPet, $foto);
 // tem que adaptar, alguem por favor faz isso
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
 salvarFotos($conexao, $nome, $idPet, $foto);
 
 header("location:../public/indexLogado.php");
-
+}
 ?>
