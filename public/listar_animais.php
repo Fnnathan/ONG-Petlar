@@ -1,5 +1,11 @@
+<?php
+session_start();
+$idUsuario = $_SESSION['idUsuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 
 <head>
     <meta charset="UTF-8">
@@ -41,7 +47,7 @@
 
             <div class="col">
                 <div class="card h-100">
-                    <a href="../controle/curtir.php?id=<?php echo $idPet; ?>" class="heart-icon">
+                    <a href="../controle/favoritar.php?idUsuario=<?php echo $idUsuario; ?>&idPet=<?php echo $idPet; ?>" class="heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </a>
                     <img class="card_pet" src="./assets/<?php echo $foto_pet[0]['nome']; ?>" class="card-img-top" alt="<?php echo $nome; ?>">

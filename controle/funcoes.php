@@ -281,24 +281,25 @@ function pesquisarGenero($conexao, $tipo)
     return $generos;
 };
 
-function desfavoritarPet($conexao, $idUsuario, $idPet) {
-    $sql = "DELETE FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
+function favoritar_desfavoritar($conexao, $idUsuario, $idPet) {
+    $sql = "SELECT * FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
     $comando = mysqli_prepare($conexao, $sql);
-
     mysqli_stmt_bind_param($comando, 'ii', $idUsuario, $idPet);
-    $funcionou = mysqli_stmt_execute($comando);
+    mysqli_stmt_execute($comando);
+    $resultado = mysqli_stmt_get_result($comando);
 
-    mysqli_stmt_close($comando);
-    
-    return $funcionou; }
+    if (mysqli_num_rows($resultado) > 0) {
+        // favoritado 
+        $sql = "DELETE FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
+    } else {
+        // N favoritado
+        $sql = "INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (?, ?)";
+    }
 
-function favoritarPet($conexao, $idUsuario, $idPet) {
-    $sql = "INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (?, ?)";
-    $comando = mysqli_prepare($conexao, $sql);
+    $stmt = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($stmt, 'ii', $idUsuario, $idPet);
+    $funcionou = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
 
-    mysqli_stmt_bind_param($comando, 'ii', $idUsuario, $idPet);
-    $funcionou = mysqli_stmt_execute($comando);
-
-    mysqli_stmt_close($comando);
-    
-    return $funcionou; }
+    return $funcionou;
+}
