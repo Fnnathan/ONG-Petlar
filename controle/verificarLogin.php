@@ -25,6 +25,9 @@ if ($idUsuario == 0) {
         $_SESSION['endereco_usuario'] = $usuario['endereco_usuario'];
         $_SESSION['telefone'] = $usuario['telefone'];
         $_SESSION['foto'] = $usuario['foto'];
+        $_SESSION['idUsuario'] = $usuario['idUsuario'];
+        
+
 
         header("Location: ../public/indexLogado.php");
         
