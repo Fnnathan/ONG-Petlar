@@ -16,6 +16,7 @@ $idUsuario = $_SESSION['idUsuario'];
 $nome_arquivo = $_FILES['foto']['name'];
 $caminho_temporario = $_FILES['foto']['tmp_name'];
 
+
 // pega a extensão do arquivo
 $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
 
@@ -30,7 +31,7 @@ $caminho_destino = "assets/" . $novo_nome;
 //movendo o arquivo para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
-if ($id == 0) {
+if ($idUsuario == 0) {
     salvarFotos($conexao, $nome, $idPet, $foto);
 // tem que adaptar, alguem por favor faz isso
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
