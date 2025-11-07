@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    
+
 </head>
 
 <body>
@@ -37,9 +37,9 @@
         <img src="./assets/cat.png" alt="cat" id="catcabecalho">
     </div>
 
-
     <iframe src="./inicio.php" name="meiuca" class="iframemeio" frameborder="3"
         style="width:100%; height:900px;"></iframe>
+
 
     <div class="footer">
         Adote, apoie, mude vidas. Juntos por um futuro melhor para os pets!
@@ -62,4 +62,5 @@
 
 
 </body>
+
 </html>

@@ -50,7 +50,7 @@ $idUsuario = $_SESSION['idUsuario'];
                     <a href="../controle/favoritar.php?idUsuario=<?php echo $idUsuario; ?>&idPet=<?php echo $idPet; ?>" class="heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </a>
-                    <img class="card_pet" src="./assets/<?php echo $foto_pet[0]['nome']; ?>" class="card-img-top" alt="<?php echo $nome; ?>">
+                   <a target="meiuca" href="perfil_pet.php"><img class="card_pet" src="./assets/<?php echo $foto_pet[0]['nome']; ?>" class="card-img-top" alt="<?php echo $nome; ?>"></a> 
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $nome; ?></h5>
                         <p class="card-text">Endereço:</strong> <?php echo $endereco_pet; ?></p>

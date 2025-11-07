@@ -28,16 +28,25 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
-         <!-- If we need pagination -->
+        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
     </div>
+    <div class="apresentacao">
 
-    
+        <h2>Conheça a ONG PETLAR</h2>
+        <p>
+            A ONG PETLAR acredita que cada vida importa. Nosso objetivo é proporcionar uma nova chance
+            para cães e gatos abandonados, promovendo adoções responsáveis e conscientização sobre o bem-estar animal.
+        </p>
+        <a target="meiuca" href="listar_animais.php" class="botao-adotar">Quero Adotar ❤️</a>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <script>
         const swiper = new Swiper('.swiper', {
-           // Optional parameters
+            // Optional parameters
             loop: true,
             autoplay: {
                 delay: 3000,
@@ -57,4 +66,5 @@
     </script>
 
 </body>
+
 </html>
