@@ -474,7 +474,7 @@ label {
 
 .heart-icon:hover {
   transform: scale(1.1);
-  background-color: rgba(255, 0, 0, 0.6);
+ 
 }
 
 .heart-icon {
