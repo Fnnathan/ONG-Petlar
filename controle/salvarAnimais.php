@@ -3,6 +3,9 @@ session_start();
 require_once "conexao.php";
 require_once "funcoes.php";
 
+
+
+
 $nome = $_POST['nome'];
 $endereco_pet = $_POST['endereco_pet'];
 $tipo = $_POST['tipo'];
@@ -16,6 +19,8 @@ $idUsuario = $_SESSION['idUsuario'];
 $nome_arquivo = $_FILES['foto']['name'];
 $caminho_temporario = $_FILES['foto']['tmp_name'];
 
+
+
 // pega a extensão do arquivo
 $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
 
@@ -27,6 +32,8 @@ $novo_nome = uniqid() . "." . $extensao;
 //deve ajustar as permissões da pasta "fotos".
 $caminho_destino = "../public/assets/" . $novo_nome;
 
+
+
 //movendo o arquivo para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
@@ -35,7 +42,7 @@ move_uploaded_file($caminho_temporario, $caminho_destino);
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
 // depois salva a foto associada a esse pet
-salvarFotos($conexao, $nome, $idPet, $novo_nome);
+salvarFotos($conexao, $novo_nome, $idPet);
 
 
 header("location:../public/indexLogado.php");
