@@ -42,11 +42,7 @@
         Já está cadastrado? <a href="logar.php">Entrar</a>
       </span>
     </form>
-  </div>
-  <div class="msg_form">
-    <h2>Criar uma conta é rápido, fácil e gratuito</h2>
-Com a sua conta da Petlar você tem acesso a adoção e doação de animais que precisam de um lar!
-  </div>
+
 </body>
 
 </html>
