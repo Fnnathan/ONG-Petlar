@@ -21,13 +21,13 @@
             <form action="../controle/salvarAnimais.php" method="post">
 
                 Nome:<br>
-                <input class="perfil-linha" type="text" name="nome" value="<?php echo $_SESSION['nome']; ?>"><br><br>
+                <input class="perfil-linha" type="text" name="nome" value="<?php echo $nome; ?>"><br><br>
 
                 Endereço:<br>
-                <input class="perfil-linha" type="email" name="email" value="<?php echo $_SESSION['email']; ?>"><br><br>
+                <input class="perfil-linha" type="email" name="email" value="<?php echo $tipo; ?>"><br><br>
 
                 Tipo:<br>
-                <input class="perfil-linha" type="password" name="senha" placeholder="Digite nova senha se quiser alterar"><br><br>
+                <input class="perfil-linha"  name="senha" ><br>
 
                 Raça:<br>
                 <input class="perfil-linha" type="text" name="endereco_usuario" value="<?php echo $_SESSION['endereco_usuario']; ?>"><br><br>

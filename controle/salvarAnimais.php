@@ -11,11 +11,10 @@ $porte = $_POST['porte'];
 $idade = $_POST['idade'];
 $peso = $_POST['peso'];
 $genero = $_POST['genero'];
-$foto = $_FILES ['foto'];
+$foto = $_FILES['foto'];
 $idUsuario = $_SESSION['idUsuario']; 
 $nome_arquivo = $_FILES['foto']['name'];
 $caminho_temporario = $_FILES['foto']['tmp_name'];
-
 
 // pega a extensão do arquivo
 $extensao = pathinfo($nome_arquivo, PATHINFO_EXTENSION);
@@ -26,18 +25,19 @@ $novo_nome = uniqid() . "." . $extensao;
 //criando um novo caminho para o arquivo (usando o endereço da página)
 //lembre-se de criar a pasta "fotos/" dentro da pasta "codigo".
 //deve ajustar as permissões da pasta "fotos".
-$caminho_destino = "assets/" . $novo_nome;
+$caminho_destino = "../public/assets/" . $novo_nome;
 
 //movendo o arquivo para o servidor
 move_uploaded_file($caminho_temporario, $caminho_destino);
 
-if ($idUsuario == 0) {
-    salvarFotos($conexao, $nome, $idPet, $foto);
-// tem que adaptar, alguem por favor faz isso
+
+// primeiro salva o animal no banco e obtém o id do pet inserido
 $idPet = salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
-salvarFotos($conexao, $nome, $idPet, $foto);
+// depois salva a foto associada a esse pet
+salvarFotos($conexao, $nome, $idPet, $novo_nome);
+
 
 header("location:../public/indexLogado.php");
-}
+exit;
 ?>

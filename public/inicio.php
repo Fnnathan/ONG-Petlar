@@ -14,21 +14,21 @@
 </head>
 
 <body>
-    <!-- Slider main container -->
+  
     <div class="swiper">
-        <!-- Additional required wrapper -->
+      
         <div class="swiper-wrapper">
-            <!-- Slides -->
+           
             <div class="swiper-slide"><img src="./assets/slide1.jpg" alt="Slide 1"></div>
             <div class="swiper-slide"><img src="./assets/slide2.jpg" alt="Slide 2"></div>
             <div class="swiper-slide"><img src="./assets/slide3.jpg" alt="Slide 3"></div>
 
         </div>
-        <!-- If we need navigation buttons -->
+      
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
-        <!-- If we need pagination -->
+      
         <div class="swiper-pagination"></div>
     </div>
     <div class="apresentacao">

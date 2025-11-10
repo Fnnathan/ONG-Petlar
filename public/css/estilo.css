@@ -1,26 +1,34 @@
+/* Container principal */
 .container {
-  max-width: 350px;
-  background: #F8F9FD;
+  width: 90%;
+  max-width: 400px;
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
   border-radius: 40px;
   padding: 25px 35px;
   border: 5px solid rgb(255, 255, 255);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 30px -20px;
   margin: 40px auto;
-  margin-left: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Título */
 .heading {
   text-align: center;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 28px;
   color: rgb(16, 137, 211);
+  margin-bottom: 10px;
 }
 
+/* Formulário */
 .form {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 15px;
 }
 
+/* Inputs */
 .form .input {
   width: 100%;
   background: white;
@@ -30,6 +38,7 @@
   margin-top: 15px;
   box-shadow: #cff0ff 0px 10px 10px -5px;
   border-inline: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
 .form .input::placeholder {
@@ -39,25 +48,10 @@
 .form .input:focus {
   outline: none;
   border-inline: 2px solid #12B1D1;
+  box-shadow: #a7e7ff 0px 10px 15px -5px;
 }
 
-
-
-.msg_form {
-  max-width: 350px;
-
-
-  border-radius: 40px;
-  padding: 25px 35px;
-
-
-  margin: 40px auto;
-  margin-right: 470px;
-  margin-top: 15px;
-
-}
-
-
+/* Botão */
 .form .login-button {
   display: block;
   width: 100%;
@@ -65,33 +59,56 @@
   background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
   color: white;
   padding-block: 15px;
-  margin: 20px auto;
+  margin: 25px auto 0;
   border-radius: 20px;
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 20px 10px -15px;
   border: none;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .form .login-button:hover {
   transform: scale(1.03);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+  box-shadow: rgba(133, 189, 215, 0.9) 0px 23px 10px -20px;
 }
 
 .form .login-button:active {
   transform: scale(0.95);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+  box-shadow: rgba(133, 189, 215, 0.8) 0px 15px 10px -10px;
 }
 
+/* Texto inferior */
 .agreement {
-  display: block;
   text-align: center;
   margin-top: 15px;
+  font-size: 10px;
+  color: #333;
 }
 
 .agreement a {
   text-decoration: none;
   color: #0099ff;
-  font-size: 9px;
+  font-size: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 25px;
+    border-radius: 25px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .form .input {
+    padding: 12px 15px;
+  }
+
+  .form .login-button {
+    padding-block: 12px;
+  }
 }
 
 
@@ -298,108 +315,116 @@ a.button:active {
   text-align: center;
 }
 
-/* Perfil usuario */
+
+/* PERFIL principal */
 .perfil-container {
-  background-color: #f2f8ff;
-  min-height: 100vh;
+  width: 90%;
+  max-width: 420px;
+  background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
+  border-radius: 40px;
+  padding: 30px 35px;
+  border: 5px solid #fff;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 30px -20px;
+  margin: 60px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.perfil-caixa {
-  background-color: #0066a2;
-  color: white;
-  width: 600px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 40px;
-}
-
-.perfil-topo {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.perfil-btn-sair {
-  text-decoration: none;
-  color: white;
-  background-color: #0277aa;
-  padding: 8px 15px;
-  border-radius: 20px;
-  transition: 0.3s;
-  font-size: 14px;
-}
-
-.perfil-btn-sair:hover {
-  background-color: #015d82;
-}
-
+/* Ícone */
 .perfil-icone {
-  text-align: center;
-  margin-bottom: 30px;
+  font-size: 80px;
+  color: rgb(16, 137, 211);
+  margin-bottom: 15px;
 }
 
-.perfil-icone i {
-  font-size: 70px;
-  color: #ccefff;
-}
-
+/* Título */
 .perfil-titulo {
+  font-weight: 900;
+  font-size: 26px;
+  color: rgb(16, 137, 211);
   text-align: center;
-  color: #aee0ff;
-  font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-left: 10px;
 }
 
 .perfil-linha {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0077bb;
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.perfil-linha strong {
-  width: 100px;
-}
-
-.perfil-linha span {
-  flex: 1;
-  text-align: left;
-}
-
-.perfil-editar {
-  color: #ccefff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.perfil-editar:hover {
-  color: white;
-}
-
-.perfil-btn-enviar {
-  background-color: white;
-  color: #0066a2;
-  font-weight: bold;
+  width: 100%;
+  background: white;
   border: none;
+  padding: 15px 20px;
   border-radius: 20px;
-  padding: 12px 25px;
-  cursor: pointer;
-  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.perfil-linha:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1;
+  box-shadow: #a7e7ff 0px 10px 15px -5px;
+}
+
+/* Botão */
+.perfil-btn-enviar {
   display: block;
-  margin: 30px auto 0;
-  transition: 0.3s;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 25px auto 0;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 20px 10px -15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
 }
 
 .perfil-btn-enviar:hover {
-  background-color: #e6f5ff;
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.9) 0px 23px 10px -20px;
+}
+
+.perfil-btn-enviar:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8) 0px 15px 10px -10px;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .perfil-container {
+    padding: 20px 25px;
+    border-radius: 25px;
+  }
+
+  .perfil-icone {
+    font-size: 60px;
+  }
+
+  .perfil-titulo {
+    font-size: 22px;
+  }
+
+  .perfil-btn-enviar {
+    padding-block: 12px;
+    font-size: 14px;
+  }
 }
 
 
@@ -429,42 +454,44 @@ a.button:active {
 
 /* estilo dos cards */
 
- .card_pet {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
+.card_pet {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
 
 .card-image-container {
-    position: relative;
+  position: relative;
 }
 
 .card-image-container img {
-    width: 100%;
-    border-radius: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 /*coraçaosin dos curtir*/
 
 
 .heart-icon:hover {
-    transform: scale(1.1);
-    background-color: rgba(255, 0, 0, 0.6);
+  transform: scale(1.1);
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 .heart-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.2s ease;
-    
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
 }
+
 .heart-icon.red {
-    color: red;
-}    
+  color: red;
+}
+
 /*CSS DO INDEX DA ESCRITA*/
 .apresentacao {
   text-align: center;
@@ -487,7 +514,7 @@ a.button:active {
 }
 
 .botao-adotar {
-  background-color:  #0077bb;
+  background-color: #0077bb;
   color: #fff;
   padding: 15px 30px;
   border-radius: 8px;
@@ -497,4 +524,19 @@ a.button:active {
 
 .botao-adotar:hover {
   background-color: #005596;
+}
+
+/*modal do bootstrap*/
+
+#btnFavoritarModal i {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+i.fa-solid fa-heart {
+  color: red;
+}
+
+i.fa-regular {
+  color: rgb(255, 255, 255);
 }

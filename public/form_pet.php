@@ -49,7 +49,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             Foto do Pet: <br>
             <input type="file" name="foto"> <br><br>
 
-            <input class="input" type="submit" value="Cadastrar">
+            <input  class="login-button" type="submit" value="Cadastrar">
 </body>
 
 </html>
