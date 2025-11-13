@@ -13,7 +13,7 @@
 
   <div class="cabecalhoazulescuro">
     <img src="./assets/dog.png" alt="dog" id="dogcabecalho">
-     <a href="./index.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
+     <a  href="./index.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
     <img src="./assets/cat.png" alt="cat" id="catcabecalho">
   </div>
 
@@ -38,9 +38,9 @@
 
       <input class="login-button" type="submit" value="Cadastrar">
 
-      <span class="forgot-password">
-        Já está cadastrado? <a href="logar.php">Entrar</a>
-      </span>
+     <br>
+        <p class="texto_criar">Já está cadastrado?<a class="criar" href="logar.php">Entrar</a></p>
+      
     </form>
 
 </body>

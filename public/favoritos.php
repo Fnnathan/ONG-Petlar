@@ -26,8 +26,8 @@ $favoritos = pegarFavoritos($conexao, $idUsuario);
 </head>
 
 <body class="bg-light">
-
-    <h1 class="text-center my-4">Meus Pets Favoritos</h1>
+<br><br>
+    <h1 class="heading">Meus Pets Favoritos</h1>
 
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -47,13 +47,13 @@ $favoritos = pegarFavoritos($conexao, $idUsuario);
             ?>
                     <div class="col">
                         <div class="card h-100">
-                           
+
                             <a href="../controle/favoritar.php?idUsuario=<?php echo $idUsuario; ?>&idPet=<?php echo $idPet; ?>"
-                               class="heart-icon position-absolute p-2" style="right:10px;top:10px;">
+                                class="heart-icon position-absolute p-2" style="right:10px;top:10px;">
                                 <i class="fa-solid fa-heart text-danger"></i>
                             </a>
 
-                            
+
                             <a href="#"
                                 class="abrirModalPet"
                                 data-id="<?php echo $idPet; ?>"
@@ -82,13 +82,13 @@ $favoritos = pegarFavoritos($conexao, $idUsuario);
             <?php
                 }
             } else {
-                echo '<div class="col text-center"><p class="fs-5 mt-4">Você ainda não tem pets favoritados</p></div>';
+                echo '<div class="col text-center"><p class="texto_criar">Você ainda não tem nenhum pet favoritado. <br> <a class="criar" href="./listar_animais.php"><i class="fa-solid fa-heart"></i>Favorite um pet!</a>
+    </div></p></div>';
             }
             ?>
         </div>
-    </div>
 
-    
+
     <div class="modal fade" id="modalPet" tabindex="-1" aria-labelledby="modalPetLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -120,7 +120,7 @@ $favoritos = pegarFavoritos($conexao, $idUsuario);
         </div>
     </div>
 
-  
+
     <script>
         document.querySelectorAll('.abrirModalPet').forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -136,24 +136,14 @@ $favoritos = pegarFavoritos($conexao, $idUsuario);
                 document.getElementById('modalPeso').textContent = this.getAttribute('data-peso');
                 document.getElementById('modalFoto').src = this.getAttribute('data-foto');
 
-                document.getElementById('btnFavoritarModal').setAttribute('data-id', idPet);
-
                 const modal = new bootstrap.Modal(document.getElementById('modalPet'));
                 modal.show();
             });
-        });
-
-        // Desfavoritar no modal
-        document.getElementById('btnFavoritarModal').addEventListener('click', function(e) {
-            e.preventDefault();
-            const idPet = this.getAttribute('data-id');
-            fetch(`../controle/favoritar.php?idUsuario=<?php echo $idUsuario; ?>&idPet=${idPet}`)
-                .then(response => location.reload())
-                .catch(error => console.error(error));
         });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

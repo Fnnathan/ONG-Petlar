@@ -295,9 +295,14 @@ function favoritar_desfavoritar($conexao, $idUsuario, $idPet)
     if (mysqli_num_rows($resultado) > 0) {
         // favoritado 
         $sql = "DELETE FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
+        header("location:../public/favoritos.php");
+
+
     } else {
         // N favoritado
         $sql = "INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (?, ?)";
+        header("location:../public/listar_animais.php");
+
 
     }
 

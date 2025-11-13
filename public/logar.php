@@ -24,14 +24,16 @@
             <input class="input" type="password" name="senha" placeholder="Senha" required />
 
             <input class="login-button" type="submit" value="Acessar">
+            <br><br>
 
-            <a href="./form_usuario.php">Criar minha conta</a>
+            
+            <p class="texto_criar">Não tem uma conta Petlar?<br><a class="criar" href="./form_usuario.php">Criar uma conta</a>  é rápido, fácil e gratuito!</p>
 
         </form>
-       
+
     </div>
-        
-    
+
+
 
 
 

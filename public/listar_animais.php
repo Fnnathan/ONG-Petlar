@@ -26,7 +26,6 @@ if (isset($_SESSION['logado'])) {
     $lista_animais = listarAnimais($conexao);
     ?>
 
-    <h1 class="text-center my-4">Lista de Animais</h1>
 
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -164,21 +163,7 @@ if (isset($_SESSION['logado'])) {
             });
         });
 
-        // === Favoritar dentro do modal ===
-        document.getElementById('btnFavoritarModal').addEventListener('click', function(e) {
-            e.preventDefault();
-            const idPet = this.dataset.id;
-            const icone = this.querySelector('i');
-
-            icone.classList.toggle('fa-regular');
-            icone.classList.toggle('fa-solid');
-
-            fetch(`../controle/favoritar.php?idUsuario=<?php echo $idUsuario; ?>&idPet=${idPet}`)
-                .then(response => {
-                    if (!response.ok) throw new Error('Erro ao favoritar');
-                })
-                .catch(error => console.error(error));
-        });
+        
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

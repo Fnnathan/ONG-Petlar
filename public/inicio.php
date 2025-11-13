@@ -38,7 +38,7 @@
             A ONG PETLAR acredita que cada vida importa. Nosso objetivo é proporcionar uma nova chance
             para cães e gatos abandonados, promovendo adoções responsáveis e conscientização sobre o bem-estar animal.
         </p>
-        <a target="meiuca" href="listar_animais.php" class="botao-adotar">Quero Adotar ❤️</a>
+        <a target="meiuca" href="listar_animais.php" class="botao-adotar" >Quero Adotar ❤️</a>
     </div>
 
 

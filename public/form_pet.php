@@ -26,26 +26,26 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
         <h1 class="heading">Doação de animais</h1>
         <form class="form" action="../controle/salvarAnimais.php" method="post" enctype="multipart/form-data">
             Nome do Pet: <br>
-            <input class="input" type="text" name="nome"> <br><br>
+            <input  class="input" type="text" name="nome"  placeholder="Nome" required > <br><br>
 
             Endereço do pet: <br>
-            <input class="input" type="text" name="endereco_pet"> <br><br>
+            <input class="input" type="text" name="endereco_pet" placeholder="Endereço" required> <br><br>
 
             <br>
-            Cachorro<input type="radio" value="Cachorro" name="tipo">Gato<input type="radio" value="Gato" name="tipo"> <br><br>
+            Cachorro<input type="radio" value="Cachorro" name="tipo">Gato<input type="radio" value="Gato" name="tipo" required> <br><br>
             Genêro: <br><br>
-            Macho<input value="Macho" type="radio" name="genero"> Fêmea<input type="radio" value="Fêmea" name="genero"> <br><br>
+            Macho<input value="Macho" type="radio" name="genero" required> Fêmea<input type="radio" value="Fêmea" name="genero"> <br><br>
            
 
             Porte: <br><br>
-            Grande<input value="Grande" type="radio" name="porte"> Médio<input type="radio" value="Médio" name="porte"> Pequeno<input type="radio" value="Pequeno" name="porte"> <br><br>
+            Grande<input value="Grande" type="radio" name="porte" required> Médio<input type="radio" value="Médio" name="porte"> Pequeno<input type="radio" value="Pequeno" name="porte"> <br><br>
            
             Raça: <br>
-            <input class="input" type="text" name="raca"> <br><br>
+            <input class="input" type="text" name="raca"  placeholder="Raça" required> <br><br>
             Idade: <br>
-            <input class="input" type="text" name="idade"> <br><br>
+            <input class="input" type="text" name="idade" placeholder="Idade" required> <br><br>
             Peso: <br>
-            <input class="input" type="text" name="peso"> <br><br>
+            <input class="input" type="text" name="peso" placeholder="Peso" required> <br><br>
             Foto do Pet: <br>
             <input type="file" name="foto"> <br><br>
 

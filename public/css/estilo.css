@@ -68,12 +68,12 @@
 }
 
 .form .login-button:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
   box-shadow: rgba(133, 189, 215, 0.9) 0px 23px 10px -20px;
 }
 
 .form .login-button:active {
-  transform: scale(0.95);
+  transform: scale(0.9);
   box-shadow: rgba(133, 189, 215, 0.8) 0px 15px 10px -10px;
 }
 
@@ -91,7 +91,7 @@
   font-size: 10px;
 }
 
-/* Responsividade */
+/* Responsividade do container */
 @media (max-width: 480px) {
   .container {
     padding: 20px 25px;
@@ -397,12 +397,12 @@ label {
 }
 
 .perfil-btn-enviar:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
   box-shadow: rgba(133, 189, 215, 0.9) 0px 23px 10px -20px;
 }
 
 .perfil-btn-enviar:active {
-  transform: scale(0.95);
+  transform: scale(0.9);
   box-shadow: rgba(133, 189, 215, 0.8) 0px 15px 10px -10px;
 }
 
@@ -473,8 +473,8 @@ label {
 
 
 .heart-icon:hover {
-  transform: scale(1.1);
- 
+  transform: scale(1.3);
+
 }
 
 .heart-icon {
@@ -484,7 +484,7 @@ label {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 
 }
 
@@ -520,10 +520,18 @@ label {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
 }
 
 .botao-adotar:hover {
   background-color: #005596;
+  transform: scale(1.2);
+}
+
+.botao-adotar:active {
+  background-color: #005596;
+  transform: scale(0.8);
 }
 
 /*modal do bootstrap*/
@@ -539,4 +547,56 @@ i.fa-solid fa-heart {
 
 i.fa-regular {
   color: rgb(255, 255, 255);
+}
+
+/*criar conta do login*/
+
+.texto_criar {
+  text-align: left;
+  font-weight: 450;
+  font-size: 16px;
+  color: rgb(16, 137, 211);
+  margin-bottom: 10px;
+
+}
+
+.criar {
+  text-align: left;
+  font-weight: 450;
+  font-size: 15px;
+  color: rgb(16, 137, 211);
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.criar:hover {
+  font-weight: 600;
+  font-size: 17px;
+   color: #005596;
+  text-decoration: underline;
+}
+
+.criar:active {
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+
+
+
+}
+
+/* gostei daquela animação de crescer do botão do perfil e dos forms... vou colocar nos links em geral*/
+.animado {
+  transition: all 0.3s ease-in-out;
+  display: inline-block; 
+}
+
+.animado:hover {
+  transform: scale(1.2);
+  
+}
+
+.animado:active {
+  transform: scale(0.6);
+  
 }

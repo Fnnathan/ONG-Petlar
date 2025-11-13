@@ -16,19 +16,19 @@
 <body>
 
     <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></a>
-        <a href="./logar.php">Entrar</a>
-        <a href="./form_pet.php">Quero Doar</a>
-        <a target="meiuca" href="./listar_animais.php">Quero Adotar</a>
+        <a  href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></a>
+        <a class="animado" href="./logar.php">Entrar</a>
+        <a class="animado" href="./form_pet.php">Quero Doar</a>
+        <a class="animado" target="meiuca" href="./listar_animais.php">Quero Adotar</a>
     </div>
 
     <div class="cabecalhoazul">
-        <a href="javascript:void(0)" id="botao_barra">
+        <a class="animado" href="javascript:void(0)" id="botao_barra">
             <i class="fa-solid fa-bars" style="color:rgb(255, 255, 255);"></i>
         </a>
 
-        <a href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
-        <a href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
+        <a  class="animado" href="./perfilUsuario.php"><i class="fa-regular fa-user" style="color:rgb(255, 255, 255);"></i></a>
+        <a class="animado" href="./favoritos.php"><i class="fa-solid fa-heart" style="color:rgb(255, 255, 255);"></i></a>
     </div>
 
     <div class="cabecalhoazulescuro">
