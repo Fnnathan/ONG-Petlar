@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-/* Título */
+/* Título do formulario*/
 .heading {
   text-align: center;
   font-weight: 900;
@@ -28,7 +28,7 @@
   margin-top: 15px;
 }
 
-/* Inputs */
+/* Inputs geral */
 .form .input {
   width: 100%;
   background: white;
@@ -51,7 +51,7 @@
   box-shadow: #a7e7ff 0px 10px 15px -5px;
 }
 
-/* Botão */
+/* Botão de confirmar*/
 .form .login-button {
   display: block;
   width: 100%;
@@ -152,6 +152,8 @@ a.button:active {
   transform: scale(0.98);
 }
 
+/* barra azul claro dos botoes*/
+
 .cabecalhoazul {
   background-color: #12B1D1;
   height: 60px;
@@ -199,6 +201,8 @@ a.button:active {
 
 
 }
+
+/*cabecalho da logo e com o cachorro e o gato*/
 
 .cabecalhoazulescuro {
   background-color: #005596;
@@ -283,37 +287,7 @@ a.button:active {
   background-color: #0d9cb9;
 }
 
-.caixa-azul {
-  background-color: #005596;
-  /* Cor azul */
-  color: white;
-  /* Cor do texto dentro da caixa */
-  padding: 20px;
-  /* Espaçamento interno */
-  border-radius: 10px;
-  /* Bordas arredondadas */
-  width: 300px;
-  /* Largura da caixa */
-  margin: 0 auto;
-  /* Centraliza a caixa */
-  text-align: left;
-  /* Centraliza o conteúdo do texto */
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.user-icon {
-  text-align: center;
-  font-size: 60px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.icone-grande {
-  font-size: 120px;
-  color: #007B9E;
-  text-align: center;
-}
 
 
 /* PERFIL principal */
@@ -331,14 +305,14 @@ a.button:active {
   align-items: center;
 }
 
-/* Ícone */
+/* Ícone do perfil usuario no formulario*/
 .perfil-icone {
   font-size: 80px;
   color: rgb(16, 137, 211);
   margin-bottom: 15px;
 }
 
-/* Título */
+/* Título do formulario do perfil usuario */
 .perfil-titulo {
   font-weight: 900;
   font-size: 26px;
@@ -347,7 +321,7 @@ a.button:active {
   margin-bottom: 20px;
 }
 
-/* Formulário */
+/* Formulário imputs perfil usuario */
 form {
   width: 100%;
   margin-top: 10px;
@@ -379,7 +353,7 @@ label {
   box-shadow: #a7e7ff 0px 10px 15px -5px;
 }
 
-/* Botão */
+/* Botão de atualizar do perfil usuario*/
 .perfil-btn-enviar {
   display: block;
   width: 100%;
@@ -406,26 +380,7 @@ label {
   box-shadow: rgba(133, 189, 215, 0.8) 0px 15px 10px -10px;
 }
 
-/* Responsivo */
-@media (max-width: 480px) {
-  .perfil-container {
-    padding: 20px 25px;
-    border-radius: 25px;
-  }
 
-  .perfil-icone {
-    font-size: 60px;
-  }
-
-  .perfil-titulo {
-    font-size: 22px;
-  }
-
-  .perfil-btn-enviar {
-    padding-block: 12px;
-    font-size: 14px;
-  }
-}
 
 
 /*estilo do slide*/
