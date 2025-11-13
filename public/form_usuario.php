@@ -5,15 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuário</title>
-  <link rel="stylesheet" href="./css/estilo.css"> 
-  <script src="../jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="./css/estilo.css">
+  
+  <script src="../Js/jquery-3.7.1.min.js"></script>
+  <script src="../Js/jquery.mask.min.js"></script>
+
 </head>
 
 <body>
 
   <div class="cabecalhoazulescuro">
     <img src="./assets/dog.png" alt="dog" id="dogcabecalho">
-     <a  href="./index.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
+    <a href="./index.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
     <img src="./assets/cat.png" alt="cat" id="catcabecalho">
   </div>
 
@@ -28,7 +31,7 @@
 
       Senha: <br>
       <input class="input" type="password" name="senha" placeholder="Senha" required><br><br>
-       
+
       Endereço: <br>
       <input class="input" type="text" name="endereco_usuario" placeholder="Endereço" required><br><br>
 
@@ -38,11 +41,17 @@
 
       <input class="login-button" type="submit" value="Cadastrar">
 
-     <br>
-        <p class="texto_criar">Já está cadastrado?<a class="criar" href="logar.php">Entrar</a></p>
-      
+      <br>
+      <p class="texto_criar">Já está cadastrado?<a class="criar" href="logar.php">Entrar</a></p>
+
     </form>
 
+    <script>
+      $(document).ready(function() {
+        
+        $('#telefone').mask('(00) 00000-0000');
+      });
+    </script>
 </body>
 
 </html>

@@ -13,12 +13,14 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar pets</title>
     <link rel="stylesheet" href="./css/estilo.css">
+    <script src="../Js/jquery-3.7.1.min.js"></script>
+    <script src="../Js/jquery.mask.min.js"></script>
 </head>
 
 <body>
     <div class="cabecalhoazulescuro">
         <img src="./assets/dog.png" alt="dog" id="dogcabecalho">
-         <a href="./indexLogado.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
+        <a href="./indexLogado.php"><img src="./assets/logo.png" alt="logo" id="logo.png"></a>
         <img src="./assets/cat.png" alt="cat" id="catcabecalho">
     </div>
 
@@ -26,7 +28,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
         <h1 class="heading">Doação de animais</h1>
         <form class="form" action="../controle/salvarAnimais.php" method="post" enctype="multipart/form-data">
             Nome do Pet: <br>
-            <input  class="input" type="text" name="nome"  placeholder="Nome" required > <br><br>
+            <input class="input" type="text" name="nome" placeholder="Nome" required> <br><br>
 
             Endereço do pet: <br>
             <input class="input" type="text" name="endereco_pet" placeholder="Endereço" required> <br><br>
@@ -35,13 +37,13 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             Cachorro<input type="radio" value="Cachorro" name="tipo">Gato<input type="radio" value="Gato" name="tipo" required> <br><br>
             Genêro: <br><br>
             Macho<input value="Macho" type="radio" name="genero" required> Fêmea<input type="radio" value="Fêmea" name="genero"> <br><br>
-           
+
 
             Porte: <br><br>
             Grande<input value="Grande" type="radio" name="porte" required> Médio<input type="radio" value="Médio" name="porte"> Pequeno<input type="radio" value="Pequeno" name="porte"> <br><br>
-           
+
             Raça: <br>
-            <input class="input" type="text" name="raca"  placeholder="Raça" required> <br><br>
+            <input class="input" type="text" name="raca" placeholder="Raça" required> <br><br>
             Idade: <br>
             <input class="input" type="text" name="idade" placeholder="Idade" required> <br><br>
             Peso: <br>
@@ -49,7 +51,9 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
             Foto do Pet: <br>
             <input type="file" name="foto"> <br><br>
 
-            <input  class="login-button" type="submit" value="Cadastrar">
+            <input class="login-button" type="submit" value="Cadastrar">
 </body>
+
+
 
 </html>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acesso ao Sistema</title>
     <link rel="stylesheet" href="./css/estilo.css" />
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery.mask.min.js"></script>
+
 </head>
 
 <body>

@@ -8,14 +8,17 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário - PETLAR</title>
     <link rel="stylesheet" href="./css/estilo.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <script src="../Js/jquery-3.7.1.min.js"></script>
+    <script src="../Js/jquery.mask.min.js"></script>
 </head>
+
 <body>
 
     <div class="perfil-container">
@@ -47,5 +50,11 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] != 'sim') {
         </form>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 0 0000-0000');
+        });
+    </script>
 </body>
+
 </html>
