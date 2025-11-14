@@ -19,6 +19,7 @@
     <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-xmark"></i></i></a>
     <a class="animado" href="./form_pet.php">Quero Doar</a>
     <a class="animado" target="meiuca" href="./listar_animais.php">Quero Adotar</a>
+    <a class="animado" target="meiuca" href="./meus_animais.php">Minhas Doações</a>
 </div>
 
 

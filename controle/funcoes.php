@@ -7,7 +7,7 @@ function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $id
     mysqli_stmt_bind_param($comando, 'sssssdids', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idUsuario, $genero);
 
     mysqli_stmt_execute($comando);
-    
+
     $idPet = mysqli_insert_id($conexao);
     mysqli_stmt_close($comando);
     return $idPet;
@@ -16,23 +16,32 @@ function salvarAnimais($conexao, $nome, $endereco_pet, $tipo, $raca, $porte, $id
 
 function editarAnimais($conexao, $idPet, $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $genero)
 {
+    $sql = "UPDATE tb_pet 
+            SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=?, genero=?
+            WHERE idPet=?";
 
-    $sql = "UPDATE tb_pet SET nome=?, endereco_pet=?, tipo=?, raca=?, porte=?, idade=?, peso=?, genero=? WHERE idPet=?";
     $comando = mysqli_prepare($conexao, $sql);
 
-
-    mysqli_stmt_bind_param($comando, 'sssssidis', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $idPet, $genero);
-
+    mysqli_stmt_bind_param($comando, 'sssssidii', $nome, $endereco_pet, $tipo, $raca, $porte, $idade, $peso, $genero, $idPet);
 
     $funcionou = mysqli_stmt_execute($comando);
 
     mysqli_stmt_close($comando);
-    return $funcionou;
-};
 
+    return $funcionou;
+}
 
 function removerAnimais($conexao, $idPet)
 {
+    // Apaga as fotos primeiro
+    $sql = "DELETE FROM tb_foto WHERE tb_pet_idPet = ?";
+    $comando = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($comando, 'i', $idPet);
+    mysqli_stmt_execute($comando);
+    mysqli_stmt_close($comando);
+
+  
     $sql = "DELETE FROM tb_pet WHERE idPet = ?";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -42,7 +51,7 @@ function removerAnimais($conexao, $idPet)
     mysqli_stmt_close($comando);
 
     return $funcionou; //true ou false
-};
+}
 
 function salvarUsuario($conexao, $nome, $email, $senha, $endereco_usuario, $telefone)
 {
@@ -72,11 +81,18 @@ function editarUsuario($conexao, $idUsuario, $nome, $email, $senha, $endereco_us
     mysqli_stmt_close($comando);
     return $funcionou;
 }
+
 function listarAnimais($conexao)
 {
-    $sql = "SELECT * FROM tb_pet";
-    $comando = mysqli_prepare($conexao, $sql);
+    $sql = "SELECT 
+                p.*, 
+                u.nome AS nome_usuario, 
+                u.telefone AS telefone_usuario
+            FROM tb_pet p
+            INNER JOIN tb_usuario u 
+                ON p.tb_usuario_idUsuario = u.idUsuario";
 
+    $comando = mysqli_prepare($conexao, $sql);
     mysqli_stmt_execute($comando);
     $resultado = mysqli_stmt_get_result($comando);
 
@@ -87,11 +103,11 @@ function listarAnimais($conexao)
 
     mysqli_stmt_close($comando);
     return $lista_animais;
-};
+}
 
 function salvarFotos($conexao, $foto_nome, $idPet)
 {
-   
+
     $sql = "INSERT INTO tb_foto (nome, tb_pet_idPet) VALUES (?, ?)";
     $comando = mysqli_prepare($conexao, $sql);
 
@@ -296,14 +312,10 @@ function favoritar_desfavoritar($conexao, $idUsuario, $idPet)
         // favoritado 
         $sql = "DELETE FROM tb_favoritos WHERE tb_usuario_idUsuario = ? AND tb_pet_idPet = ?";
         header("location:../public/favoritos.php");
-
-
     } else {
         // N favoritado
         $sql = "INSERT INTO tb_favoritos (tb_usuario_idUsuario, tb_pet_idPet) VALUES (?, ?)";
         header("location:../public/listar_animais.php");
-
-
     }
 
     $stmt = mysqli_prepare($conexao, $sql);

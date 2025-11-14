@@ -20,6 +20,7 @@
         <a class="animado" href="./logar.php">Entrar</a>
         <a class="animado" href="./form_pet.php">Quero Doar</a>
         <a class="animado" target="meiuca" href="./listar_animais.php">Quero Adotar</a>
+       
     </div>
 
     <div class="cabecalhoazul">
