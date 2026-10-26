@@ -77,27 +77,29 @@ Abaixo estão algumas das principais interfaces desenvolvidas para o sistema.
 
 ### Página inicial
 
-![Página inicial do PetLar]()
+![Página inicial do PetLar](capturas_petlar/p_inicial.png)
+
+![Página inicial do PetLar2](capturas_petlar/p_inicial2.png)
 
 ### Login
 
-![Tela de login]()
+![Tela de login](capturas_petlar/login_usuario.png)
 
 ### Cadastro de usuários
 
-![Cadastro de usuários]()
+![Cadastro de usuários](capturas_petlar/c_usuarios.png)
 
 ### Listagem de animais
 
-![Listagem de animais]()
+![Listagem de animais](capturas_petlar/l_pets.png)
 
 ### Favoritos
 
-![Página de favoritos]()
+![Página de favoritos](capturas_petlar/pets_favoritos.png)
 
 ### Cadastro de animais
 
-![Cadastro de animais]()
+![Cadastro de animais](capturas_petlar/c_pets.png)
 
 ## Sobre este repositório
 
